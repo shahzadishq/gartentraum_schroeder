@@ -1,138 +1,108 @@
 import Image from 'next/image';
-import { site } from '@/lib/site';
 import { asset } from '@/lib/asset';
-import { ArrowRightIcon, LeafIcon, CheckIcon, WhatsAppIcon } from './icons';
+import { ArrowRightIcon, LeafIcon } from './icons';
 
 export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden bg-sand-50 pt-28 pb-16 sm:pt-32 lg:pt-40 lg:pb-24"
+      className="relative flex min-h-[100svh] items-center overflow-hidden"
     >
-      {/* Decorative organic shapes */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-32 -top-24 h-[32rem] w-[32rem] rounded-full bg-brand-100/50 blur-3xl"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -left-40 top-40 h-96 w-96 rounded-full bg-sand-200/50 blur-3xl"
-      />
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <Image
+          src={asset('/images/hero.webp')}
+          alt="Hochwertig angelegter Garten mit Natursteinterrasse und gepflegtem Rasen von Gartentraum Schröder"
+          fill
+          priority
+          sizes="100vw"
+          className="animate-slow-zoom object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-forest-950/88 via-forest-950/60 to-forest-900/25" />
+        <div className="absolute inset-0 bg-gradient-to-t from-forest-950/80 via-transparent to-forest-950/30" />
+      </div>
 
-      <div className="container-content section-padding relative">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
-          {/* Text column */}
-          <div>
-            <span className="eyebrow mb-6 animate-fade-up">
-              <LeafIcon className="h-4 w-4 text-brand-500" />
-              Garten- & Landschaftsbau · Westoverledingen
+      {/* Content */}
+      <div className="container-content section-padding relative z-10 pt-32 pb-24">
+        <div className="max-w-2xl">
+          <span className="eyebrow mb-6 animate-fade-up text-brand-300">
+            <LeafIcon className="h-4 w-4" />
+            Garten- & Landschaftsbau · Westoverledingen
+          </span>
+
+          <h1
+            className="heading-serif hero-text-shadow animate-fade-up text-balance text-5xl text-sand-50 sm:text-6xl lg:text-7xl"
+            style={{ animationDelay: '80ms' }}
+          >
+            Vom Garten zum{' '}
+            <span className="relative whitespace-nowrap text-brand-300">
+              Traumraum.
+              <svg
+                aria-hidden
+                viewBox="0 0 300 12"
+                className="hero-underline absolute -bottom-2 left-0 w-full text-brand-400"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M2 9C60 3 120 3 180 6s90 3 118 0"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                />
+              </svg>
             </span>
+          </h1>
 
-            <h1
-              className="heading-serif animate-fade-up text-balance text-5xl sm:text-6xl lg:text-[4.2rem]"
-              style={{ animationDelay: '80ms' }}
-            >
-              Vom Garten zum{' '}
-              <span className="relative whitespace-nowrap text-brand-600">
-                Traumraum.
-                <svg
-                  aria-hidden
-                  viewBox="0 0 300 12"
-                  className="absolute -bottom-2 left-0 w-full text-brand-300"
-                  preserveAspectRatio="none"
-                >
-                  <path
-                    d="M2 9C60 3 120 3 180 6s90 3 118 0"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </span>
-            </h1>
+          <p
+            className="mt-8 max-w-xl animate-fade-up text-lg leading-relaxed text-sand-100/90 hero-text-shadow"
+            style={{ animationDelay: '160ms' }}
+          >
+            Professioneller Garten- und Landschaftsbau in Westoverledingen. Von
+            der 3D-Gartenplanung bis zur kompletten Umsetzung – alles aus einer
+            Hand.
+          </p>
 
-            <p
-              className="mt-7 max-w-xl animate-fade-up text-lg leading-relaxed text-forest-700/80"
-              style={{ animationDelay: '160ms' }}
-            >
-              Professioneller Garten- und Landschaftsbau in Westoverledingen.
-              Von der 3D-Gartenplanung bis zur kompletten Umsetzung – alles aus
-              einer Hand.
-            </p>
-
-            <div
-              className="mt-9 flex animate-fade-up flex-col gap-4 sm:flex-row"
-              style={{ animationDelay: '240ms' }}
-            >
-              <a href="#kontakt" className="btn-primary group">
-                Kostenlose Beratung anfragen
-                <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </a>
-              <a href="#leistungen" className="btn-secondary">
-                Unsere Leistungen entdecken
-              </a>
-            </div>
-
-            <div
-              className="mt-10 flex animate-fade-up flex-wrap gap-x-6 gap-y-3 text-sm text-forest-700/80"
-              style={{ animationDelay: '320ms' }}
-            >
-              {['3D-Gartenplanung', 'Alles aus einer Hand', 'Regional in Ostfriesland'].map(
-                (item) => (
-                  <span key={item} className="flex items-center gap-2">
-                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-brand-100 text-brand-600">
-                      <CheckIcon className="h-3 w-3" />
-                    </span>
-                    {item}
-                  </span>
-                ),
-              )}
-            </div>
+          <div
+            className="mt-10 flex animate-fade-up flex-col gap-4 sm:flex-row"
+            style={{ animationDelay: '240ms' }}
+          >
+            <a href="#kontakt" className="btn-light group">
+              Kostenlose Beratung anfragen
+              <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="#leistungen" className="btn-ghost-light">
+              Unsere Leistungen entdecken
+            </a>
           </div>
 
-          {/* Image column */}
-          <div className="relative animate-fade-up" style={{ animationDelay: '200ms' }}>
-            <div className="relative aspect-[5/6] overflow-hidden rounded-[2rem] shadow-card sm:aspect-[4/5]">
-              <Image
-                src={asset('/images/pool.jpg')}
-                alt="Moderne Poolanlage mit Terrasse und Bepflanzung – realisiert von Gartentraum Schröder"
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 45vw"
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-forest-950/25 via-transparent to-transparent" />
-            </div>
-
-            {/* Floating badge */}
-            <div className="absolute -bottom-5 -left-3 flex items-center gap-3 rounded-2xl bg-sand-50 p-4 pr-5 shadow-card sm:-left-6">
-              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-500 font-serif text-lg font-semibold text-white">
-                3D
-              </span>
-              <span className="text-sm leading-tight">
-                <span className="block font-semibold text-forest-900">
-                  3D-Gartenplanung
+          <div
+            className="mt-14 flex animate-fade-up flex-wrap items-center gap-x-8 gap-y-4 text-sm text-sand-100/80"
+            style={{ animationDelay: '320ms' }}
+          >
+            {['3D-Gartenplanung', 'Alles aus einer Hand', 'Regional in Ostfriesland'].map(
+              (item) => (
+                <span key={item} className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-brand-400" />
+                  {item}
                 </span>
-                <span className="block text-forest-700/70">
-                  Sehen, bevor gebaut wird
-                </span>
-              </span>
-            </div>
-
-            {/* WhatsApp quick action */}
-            <a
-              href={site.whatsappHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group absolute -right-2 top-6 flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-2.5 text-sm font-semibold text-white shadow-card transition-transform hover:-translate-y-0.5 sm:-right-5"
-            >
-              <WhatsAppIcon className="h-4 w-4" />
-              <span className="hidden sm:inline">WhatsApp</span>
-            </a>
+              ),
+            )}
           </div>
         </div>
       </div>
+
+      {/* Scroll hint */}
+      <a
+        href="#intro"
+        className="absolute bottom-8 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-2 text-sand-100/70 transition-colors hover:text-sand-50 lg:flex"
+        aria-label="Weiter scrollen"
+      >
+        <span className="text-[10px] font-medium uppercase tracking-[0.3em]">Scroll</span>
+        <span className="flex h-10 w-6 items-start justify-center rounded-full border border-sand-100/40 p-1.5">
+          <span className="h-2 w-1 animate-float rounded-full bg-sand-100/70" />
+        </span>
+      </a>
     </section>
   );
 }

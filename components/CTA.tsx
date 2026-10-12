@@ -10,8 +10,8 @@ export default function CTA() {
       {/* Background */}
       <div className="absolute inset-0">
         <Image
-          src={asset('/images/pool.jpg')}
-          alt="Moderne Poolanlage von Gartentraum Schröder"
+          src={asset('/images/pool-stone.webp')}
+          alt="Pool mit Natursteineinfassung von Gartentraum Schröder in der Abenddämmerung"
           fill
           sizes="100vw"
           className="object-cover object-center"

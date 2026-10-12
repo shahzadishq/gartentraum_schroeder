@@ -53,10 +53,10 @@ export const metadata: Metadata = {
       'Ihr Traumgarten aus einer Hand – professionelle 3D-Gartenplanung, Landschaftsbau, Pflasterarbeiten und Poolbau in Westoverledingen & Ostfriesland.',
     images: [
       {
-        url: '/images/pool.jpg',
-        width: 526,
-        height: 464,
-        alt: 'Moderne Poolanlage von Gartentraum Schröder',
+        url: '/images/og.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Hochwertig angelegter Garten von Gartentraum Schröder',
       },
     ],
   },
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
       'Gartentraum Schröder | Garten- & Landschaftsbau Westoverledingen',
     description:
       'Ihr Traumgarten aus einer Hand – 3D-Gartenplanung, Landschaftsbau, Pflasterarbeiten & Poolbau in Westoverledingen.',
-    images: ['/images/pool.jpg'],
+    images: ['/images/og.jpg'],
   },
   robots: {
     index: true,
@@ -86,7 +86,7 @@ const jsonLd = {
   '@type': 'LocalBusiness',
   '@id': site.url,
   name: 'Gartentraum Schröder',
-  image: `${site.url}/images/pool.jpg`,
+  image: `${site.url}/images/og.jpg`,
   logo: `${site.url}/images/logo.png`,
   url: site.url,
   telephone: site.phone,
