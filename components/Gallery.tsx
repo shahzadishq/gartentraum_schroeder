@@ -77,12 +77,6 @@ const projects: Project[] = [
     label: 'Gartenneuanlage',
     categories: ['Gartenneugestaltung'],
   },
-  {
-    src: '/images/pool-build.jpg',
-    alt: 'Poolbau – Aushub und Bewehrung für ein neues Schwimmbecken',
-    label: 'Poolbau im Neubau',
-    categories: ['Poolanlagen', 'Gartenneugestaltung'],
-  },
 ];
 
 const categories: Category[] = [
