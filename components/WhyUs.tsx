@@ -46,21 +46,21 @@ const reasons = [
 
 export default function WhyUs() {
   return (
-    <section id="warum-wir" className="relative overflow-hidden bg-forest-900 py-24 lg:py-32">
+    <section id="warum-wir" className="relative overflow-hidden bg-clay py-24 lg:py-32">
       {/* Decorative blurred shapes */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-24 top-10 h-72 w-72 rounded-full bg-forest-700/40 blur-3xl"
+        className="pointer-events-none absolute -right-24 top-10 h-72 w-72 rounded-full bg-bark/40 blur-3xl"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-forest-800/50 blur-3xl"
+        className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-black/20 blur-3xl"
       />
 
       <div className="container-content section-padding relative">
         <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <Reveal>
-            <span className="eyebrow mb-5 text-forest-300">Warum Gartentraum Schröder?</span>
+            <span className="eyebrow mb-5 text-brand-300">Warum Gartentraum Schröder?</span>
             <h2 className="heading-serif text-4xl text-sand-50 sm:text-5xl">
               Gründe, uns Ihren Garten anzuvertrauen
             </h2>
@@ -89,9 +89,9 @@ export default function WhyUs() {
                 return (
                   <div
                     key={reason.title}
-                    className="group moving-border relative rounded-2xl border border-sand-50/10 bg-forest-800/40 p-6 transition-all duration-500 hover:-translate-y-1.5 hover:border-transparent hover:bg-forest-800/80 hover:shadow-card"
+                    className="group moving-border relative rounded-2xl border border-sand-50/15 bg-black/15 p-6 transition-all duration-500 hover:-translate-y-1.5 hover:border-transparent hover:bg-black/25 hover:shadow-card"
                   >
-                    <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-forest-700/60 text-forest-200 transition-all duration-500 group-hover:scale-110 group-hover:bg-brand-400 group-hover:text-forest-950">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-black/20 text-sand-100 transition-all duration-500 group-hover:scale-110 group-hover:bg-brand-300 group-hover:text-[#3a2817]">
                       <Icon className="h-6 w-6 transition-transform duration-700 ease-out group-hover:rotate-[360deg]" />
                     </span>
                     <h3 className="mt-4 font-serif text-lg font-medium text-sand-50">

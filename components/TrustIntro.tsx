@@ -30,7 +30,7 @@ export default function TrustIntro() {
               </Parallax>
             </div>
             {/* Floating stat card */}
-            <div className="absolute -bottom-6 -right-2 w-48 rounded-2xl bg-forest-800 p-6 text-sand-50 shadow-card sm:-right-6">
+            <div className="absolute -bottom-6 -right-2 w-48 rounded-2xl bg-clay p-6 text-sand-50 shadow-card sm:-right-6">
               <p className="font-serif text-4xl font-semibold">3D</p>
               <p className="mt-1 text-sm leading-snug text-sand-200">
                 Gartenplanung – Ihr Garten sichtbar, bevor gebaut wird.

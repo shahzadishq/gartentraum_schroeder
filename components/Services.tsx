@@ -50,7 +50,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="leistungen" className="relative bg-forest-950 py-24 lg:py-32">
+    <section id="leistungen" className="relative bg-clay py-24 lg:py-32">
       {/* subtle texture */}
       <div
         aria-hidden
@@ -63,7 +63,7 @@ export default function Services() {
       />
       <div className="container-content section-padding relative">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <span className="eyebrow mb-5 text-forest-300">Unsere Leistungen</span>
+          <span className="eyebrow mb-5 text-brand-300">Unsere Leistungen</span>
           <h2 className="heading-serif text-4xl text-sand-50 sm:text-5xl">
             Alles rund um Ihren Außenbereich – aus einer Hand
           </h2>
@@ -78,8 +78,8 @@ export default function Services() {
             const Icon = service.icon;
             return (
               <Reveal key={service.title} delay={(i % 3) * 90}>
-                <article className="group moving-border relative flex h-full flex-col rounded-3xl border border-sand-50/10 bg-forest-900/60 p-8 transition-all duration-500 hover:-translate-y-1.5 hover:border-transparent hover:bg-forest-800/70 hover:shadow-card">
-                  <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-forest-700/60 text-forest-200 transition-all duration-500 group-hover:scale-110 group-hover:bg-brand-400 group-hover:text-forest-950">
+                <article className="group moving-border relative flex h-full flex-col rounded-3xl border border-sand-50/15 bg-black/15 p-8 transition-all duration-500 hover:-translate-y-1.5 hover:border-transparent hover:bg-black/25 hover:shadow-card">
+                  <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-black/20 text-sand-100 transition-all duration-500 group-hover:scale-110 group-hover:bg-brand-300 group-hover:text-[#3a2817]">
                     <Icon className="h-7 w-7 transition-transform duration-700 ease-out group-hover:rotate-[360deg]" />
                   </span>
                   <h3 className="mt-6 font-serif text-xl font-medium text-sand-50">
@@ -91,14 +91,14 @@ export default function Services() {
                   <ul className="mt-5 space-y-2 text-sm text-sand-200/90">
                     {service.points.map((p) => (
                       <li key={p} className="flex items-center gap-2">
-                        <span className="h-1.5 w-1.5 rounded-full bg-forest-400" />
+                        <span className="h-1.5 w-1.5 rounded-full bg-brand-300" />
                         {p}
                       </li>
                     ))}
                   </ul>
                   <a
                     href="#kontakt"
-                    className="mt-7 inline-flex items-center gap-1.5 text-sm font-semibold text-forest-300 transition-colors group-hover:text-sand-50"
+                    className="mt-7 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-200 transition-colors group-hover:text-sand-50"
                   >
                     Mehr erfahren
                     <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" />
