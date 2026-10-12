@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-playfair: 'Playfair Display', serif;
+    --font-inter: 'Inter', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-sand-50 text-forest-900 font-sans;
+  }
+
+  ::selection {
+    @apply bg-forest-700 text-sand-50;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-5 sm:px-8 lg:px-12;
+  }
+
+  .container-content {
+    @apply mx-auto w-full max-w-content;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-forest-500;
+  }
+
+  .heading-serif {
+    @apply font-serif font-medium leading-[1.08] tracking-tight text-forest-900;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold tracking-wide transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-forest-500 focus-visible:ring-offset-2 focus-visible:ring-offset-sand-50;
+  }
+
+  .btn-primary {
+    @apply btn bg-forest-700 text-sand-50 shadow-soft hover:bg-forest-800 hover:shadow-card hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply btn border border-forest-700/25 bg-transparent text-forest-800 hover:border-forest-700 hover:bg-forest-700 hover:text-sand-50;
+  }
+
+  .btn-light {
+    @apply btn bg-sand-50 text-forest-800 hover:bg-white hover:-translate-y-0.5 shadow-soft;
+  }
+
+  .btn-ghost-light {
+    @apply btn border border-sand-50/40 text-sand-50 hover:bg-sand-50/10;
+  }
+}
+
+/* Scroll reveal base state – progressively enhanced by IntersectionObserver */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .animate-slow-zoom,
+  .animate-float {
+    animation: none !important;
+  }
+}
