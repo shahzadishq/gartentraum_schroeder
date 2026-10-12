@@ -19,9 +19,9 @@ export default function Hero() {
           className="animate-slow-zoom object-cover object-center"
         />
         {/* Strong left-to-right dark overlay keeps the left-aligned text legible */}
-        <div className="absolute inset-0 bg-gradient-to-r from-forest-950 via-forest-950/80 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-forest-950/70 via-forest-950/15 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-forest-950/80 via-transparent to-forest-950/25" />
+        <div className="absolute inset-0 bg-gradient-to-r from-bark via-bark/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-bark/70 via-bark/15 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-bark/80 via-transparent to-bark/25" />
       </div>
 
       {/* Content */}

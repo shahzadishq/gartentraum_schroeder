@@ -133,7 +133,7 @@ export default function Navbar() {
           backdrop-blur doesn't turn it into the overlay's containing block. */}
       <div
         id="mobile-menu"
-        className={`fixed inset-0 z-40 overflow-y-auto overflow-x-hidden bg-forest-950 transition-opacity duration-300 lg:hidden ${
+        className={`fixed inset-0 z-40 overflow-y-auto overflow-x-hidden bg-bark transition-opacity duration-300 lg:hidden ${
           open ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'
         }`}
       >

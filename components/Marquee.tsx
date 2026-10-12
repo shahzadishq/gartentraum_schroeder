@@ -17,7 +17,7 @@ export default function Marquee() {
   // Rendered twice back-to-back so the -50% translate loops seamlessly.
   const row = [...items, ...items];
   return (
-    <div className="overflow-hidden border-y border-forest-800/50 bg-forest-900 py-5">
+    <div className="overflow-hidden border-y border-black/20 bg-bark py-5">
       <div className="flex w-max animate-marquee items-center gap-10 pr-10">
         {row.map((item, i) => (
           <span

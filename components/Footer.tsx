@@ -22,7 +22,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-forest-950 text-sand-200/80">
+    <footer className="bg-bark text-sand-200/80">
       <div className="container-content section-padding py-16 lg:py-20">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.1fr]">
           {/* Brand */}
@@ -42,7 +42,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-sand-50/15 text-sand-200 transition-all hover:border-forest-400 hover:bg-forest-400 hover:text-forest-950"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-sand-50/15 text-sand-200 transition-all hover:border-brand-400 hover:bg-brand-400 hover:text-[#3a2817]"
               >
                 <InstagramIcon className="h-5 w-5" />
               </a>
@@ -51,7 +51,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-sand-50/15 text-sand-200 transition-all hover:border-forest-400 hover:bg-forest-400 hover:text-forest-950"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-sand-50/15 text-sand-200 transition-all hover:border-brand-400 hover:bg-brand-400 hover:text-[#3a2817]"
               >
                 <FacebookIcon className="h-5 w-5" />
               </a>
@@ -60,7 +60,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-sand-50/15 text-sand-200 transition-all hover:border-[#25D366] hover:bg-[#25D366] hover:text-white"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-sand-50/15 text-sand-200 transition-all hover:border-brand-400 hover:bg-brand-400 hover:text-[#3a2817]"
               >
                 <WhatsAppIcon className="h-5 w-5" />
               </a>
@@ -112,7 +112,7 @@ export default function Footer() {
             </h3>
             <ul className="mt-5 space-y-4 text-sm">
               <li className="flex items-start gap-3">
-                <MapPinIcon className="mt-0.5 h-5 w-5 shrink-0 text-forest-400" />
+                <MapPinIcon className="mt-0.5 h-5 w-5 shrink-0 text-brand-400" />
                 <span>
                   {site.location}
                   <br />
@@ -124,7 +124,7 @@ export default function Footer() {
                   href={site.phoneHref}
                   className="flex items-center gap-3 transition-colors hover:text-sand-50"
                 >
-                  <PhoneIcon className="h-5 w-5 shrink-0 text-forest-400" />
+                  <PhoneIcon className="h-5 w-5 shrink-0 text-brand-400" />
                   {site.phone}
                 </a>
               </li>
@@ -144,7 +144,7 @@ export default function Footer() {
                   href={site.emailHref}
                   className="flex items-center gap-3 transition-colors hover:text-sand-50"
                 >
-                  <MailIcon className="h-5 w-5 shrink-0 text-forest-400" />
+                  <MailIcon className="h-5 w-5 shrink-0 text-brand-400" />
                   {site.email}
                 </a>
               </li>

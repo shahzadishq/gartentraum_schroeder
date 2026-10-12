@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
-import { Quicksand, Inter } from 'next/font/google';
+import { Jost, Inter } from 'next/font/google';
 import { site } from '@/lib/site';
 import './globals.css';
 
-// Quicksand is a geometric, slightly rounded sans that echoes the
+// Jost is a geometric (Futura-style) sans that closely matches the
 // Gartentraum Schröder logo wordmark. Loaded into --font-heading.
-const heading = Quicksand({
+const heading = Jost({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-heading',

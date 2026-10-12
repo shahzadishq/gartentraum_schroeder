@@ -47,7 +47,7 @@ const config: Config = {
           50: '#f3f8e8',
           100: '#e6f1cc',
           200: '#cbe29a',
-          300: '#89c541', // lime (logo) – bright accent on dark
+          300: '#7fb142', // fresh green (logo) – accent on dark
           400: '#7fb142', // fresh green (logo)
           500: '#5f8339', // brand green (logo) – primary
           600: '#4d6a34', // olive (logo)
@@ -56,7 +56,8 @@ const config: Config = {
           900: '#283617',
         },
         // Earthy browns from the logo wordmark / tree trunk.
-        clay: '#885f41',
+        // Site dark surfaces use the deep bark brown.
+        clay: '#5e3c1e',
         bark: '#5e3c1e',
       },
       fontFamily: {

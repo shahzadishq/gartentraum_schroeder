@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --font-heading: 'Quicksand', system-ui, sans-serif;
+    --font-heading: 'Jost', system-ui, sans-serif;
     --font-inter: 'Inter', sans-serif;
   }
 
