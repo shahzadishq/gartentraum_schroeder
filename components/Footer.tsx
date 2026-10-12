@@ -1,11 +1,12 @@
 import { site, navLinks } from '@/lib/site';
+import Logo from './Logo';
 import {
-  LeafIcon,
   PhoneIcon,
   MailIcon,
   MapPinIcon,
   InstagramIcon,
   FacebookIcon,
+  WhatsAppIcon,
 } from './icons';
 
 const services = [
@@ -26,19 +27,10 @@ export default function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.1fr]">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2.5 text-sand-50">
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-forest-700">
-                <LeafIcon className="h-5 w-5" />
-              </span>
-              <span className="flex flex-col leading-none">
-                <span className="font-serif text-lg font-semibold">
-                  Gartentraum Schröder
-                </span>
-                <span className="mt-0.5 text-[10px] font-medium uppercase tracking-[0.3em] text-forest-300">
-                  {site.tagline}
-                </span>
-              </span>
-            </div>
+            <Logo variant="white" className="h-12 w-auto" />
+            <p className="mt-4 text-[10px] font-medium uppercase tracking-[0.3em] text-brand-300">
+              {site.tagline} · {site.location}
+            </p>
             <p className="mt-5 max-w-xs text-sm leading-relaxed">
               Ihr regionaler Partner für Garten- und Landschaftsbau in
               Westoverledingen. Von der Idee bis zum Traumgarten – Beratung &
@@ -62,6 +54,15 @@ export default function Footer() {
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-sand-50/15 text-sand-200 transition-all hover:border-forest-400 hover:bg-forest-400 hover:text-forest-950"
               >
                 <FacebookIcon className="h-5 w-5" />
+              </a>
+              <a
+                href={site.whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-sand-50/15 text-sand-200 transition-all hover:border-[#25D366] hover:bg-[#25D366] hover:text-white"
+              >
+                <WhatsAppIcon className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -125,6 +126,17 @@ export default function Footer() {
                 >
                   <PhoneIcon className="h-5 w-5 shrink-0 text-forest-400" />
                   {site.phone}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={site.whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 transition-colors hover:text-sand-50"
+                >
+                  <WhatsAppIcon className="h-5 w-5 shrink-0 text-brand-400" />
+                  {site.whatsapp}
                 </a>
               </li>
               <li>

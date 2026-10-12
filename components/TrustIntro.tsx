@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Reveal from './Reveal';
+import { asset } from '@/lib/asset';
 import { CheckIcon } from './icons';
 
 const trustPoints = [
@@ -18,8 +19,8 @@ export default function TrustIntro() {
           <Reveal className="relative">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-card">
               <Image
-                src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1200&q=80"
-                alt="Gepflegte Gartenanlage mit Stauden, Wegen und natürlicher Bepflanzung"
+                src={asset('/images/owner.jpg')}
+                alt="Inhaber von Gartentraum Schröder beim Verlegen von Rollrasen"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover transition-transform duration-700 hover:scale-105"
