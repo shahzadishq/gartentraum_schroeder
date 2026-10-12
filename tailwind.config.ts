@@ -40,20 +40,20 @@ const config: Config = {
           light: '#b7b2a6',
           dark: '#5f5b50',
         },
-        // Green scale sampled from the Gartentraum Schröder logo tree.
-        // Anchors: 400 #89C541 (lime), 600 #5F8339 (main), 700 #4D6A34,
-        // 800 #445729 (deep) — all taken directly from the logo.
+        // Green scale from the Gartentraum Schröder logo tree.
+        // Steps 300–700 are the EXACT colors sampled from the logo; 50–200
+        // are pale tints (for subtle backgrounds), 800–900 darker shades.
         brand: {
           50: '#f3f8e8',
           100: '#e6f1cc',
           200: '#cbe29a',
-          300: '#a7d24e',
-          400: '#89c541',
-          500: '#6f9b3b',
-          600: '#5f8339',
-          700: '#4d6a34',
-          800: '#445729',
-          900: '#33421f',
+          300: '#89c541', // lime (logo) – bright accent on dark
+          400: '#7fb142', // fresh green (logo)
+          500: '#5f8339', // brand green (logo) – primary
+          600: '#4d6a34', // olive (logo)
+          700: '#445729', // deep forest (logo)
+          800: '#374820',
+          900: '#283617',
         },
         // Earthy browns from the logo wordmark / tree trunk.
         clay: '#885f41',
