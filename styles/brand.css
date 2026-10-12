@@ -1,0 +1,31 @@
+/**
+ * Gartentraum Schröder – brand color tokens
+ * Sampled directly from the official logo.
+ * Import or copy these variables into any project.
+ */
+:root {
+  /* Greens (the tree) */
+  --gs-lime: #89c541; /* bright highlight / accent */
+  --gs-green-fresh: #7fb142;
+  --gs-green: #5f8339; /* primary brand green */
+  --gs-olive: #4d6a34;
+  --gs-forest: #445729; /* deep green */
+  --gs-forest-deep: #1d2e22; /* near-black green (UI dark) */
+
+  /* Browns (wordmark & trunk) */
+  --gs-tan: #90684d;
+  --gs-brown: #885f41; /* main brown */
+  --gs-earth: #85563a;
+  --gs-bark: #5e3c1e; /* darkest bark */
+
+  /* Neutrals */
+  --gs-cream: #faf8f3;
+  --gs-sand: #f5f1e8;
+  --gs-stone: #8a8578;
+
+  /* Suggested roles */
+  --gs-primary: var(--gs-green);
+  --gs-accent: var(--gs-lime);
+  --gs-text: #1d2e22;
+  --gs-bg: var(--gs-cream);
+}
