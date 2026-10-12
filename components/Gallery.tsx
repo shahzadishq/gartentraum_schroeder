@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Reveal from './Reveal';
 import { site } from '@/lib/site';
+import { asset } from '@/lib/asset';
 import { InstagramIcon, ArrowRightIcon } from './icons';
 
 type Category =
@@ -17,52 +18,57 @@ type Category =
 type Project = {
   src: string;
   alt: string;
-  category: Exclude<Category, 'Alle'>;
+  label: string;
+  categories: Exclude<Category, 'Alle'>[];
   span?: boolean;
 };
 
+// Real projects from Gartentraum Schröder.
 const projects: Project[] = [
   {
-    src: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Moderner Garten mit klaren Linien und gepflegtem Rasen',
-    category: 'Moderne Gärten',
+    src: '/images/pool.jpg',
+    alt: 'Moderne Poolanlage mit anthrazitfarbenem Sichtschutz und Bepflanzung',
+    label: 'Poolanlage mit Sichtschutz',
+    categories: ['Poolanlagen', 'Moderne Gärten'],
     span: true,
   },
   {
-    src: 'https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=800&q=80',
-    alt: 'Angelegte Terrasse mit Bepflanzung',
-    category: 'Terrassen',
+    src: '/images/fence.jpg',
+    alt: 'Moderne Doppelstabmatten-Einfriedung mit integrierter Paketbox',
+    label: 'Moderne Einfriedung',
+    categories: ['Moderne Gärten'],
   },
   {
-    src: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&q=80',
-    alt: 'Gartengestaltung mit Stauden und Wegen',
-    category: 'Gartenneugestaltung',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=800&q=80',
-    alt: 'Pflasterfläche mit Natursteinoptik',
-    category: 'Pflasterarbeiten',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Moderne Poolanlage im Garten',
-    category: 'Poolanlagen',
+    src: '/images/pavers-terrace.jpg',
+    alt: 'Hochwertig verlegte großformatige Terrassenplatten',
+    label: 'Terrassenplatten verlegt',
+    categories: ['Pflasterarbeiten', 'Terrassen'],
     span: true,
   },
   {
-    src: 'https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=800&q=80',
-    alt: 'Großzügige Holzterrasse mit Outdoor-Lounge',
-    category: 'Terrassen',
+    src: '/images/terrace.jpg',
+    alt: 'Überdachte Terrasse mit Natursteinpflaster',
+    label: 'Überdachte Terrasse',
+    categories: ['Terrassen'],
   },
   {
-    src: 'https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=800&q=80',
-    alt: 'Neu gestalteter moderner Garten',
-    category: 'Moderne Gärten',
+    src: '/images/pavers-work.jpg',
+    alt: 'Pflasterarbeiten in Ausführung – präzise Verlegung',
+    label: 'Pflasterarbeiten',
+    categories: ['Pflasterarbeiten'],
   },
   {
-    src: 'https://images.unsplash.com/photo-1605117882932-f9e32b03fea9?auto=format&fit=crop&w=800&q=80',
-    alt: 'Gepflasterte Einfahrt mit sauberer Verlegung',
-    category: 'Pflasterarbeiten',
+    src: '/images/earthworks.jpg',
+    alt: 'Erdarbeiten mit Radlader für eine neue Gartenanlage',
+    label: 'Erd- & Grundarbeiten',
+    categories: ['Gartenneugestaltung'],
+  },
+  {
+    src: '/images/pool-build.jpg',
+    alt: 'Poolbau – Aushub und Bewehrung für ein neues Schwimmbecken',
+    label: 'Poolbau im Neubau',
+    categories: ['Poolanlagen', 'Gartenneugestaltung'],
+    span: true,
   },
 ];
 
@@ -81,7 +87,7 @@ export default function Gallery() {
   const filtered =
     active === 'Alle'
       ? projects
-      : projects.filter((p) => p.category === active);
+      : projects.filter((p) => p.categories.includes(active));
 
   return (
     <section id="projekte" className="bg-sand-50 py-24 lg:py-32">
@@ -137,7 +143,7 @@ export default function Gallery() {
               }`}
             >
               <Image
-                src={project.src}
+                src={asset(project.src)}
                 alt={project.alt}
                 fill
                 sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
@@ -145,8 +151,11 @@ export default function Gallery() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-forest-950/80 via-forest-950/10 to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-95" />
               <div className="absolute inset-x-0 bottom-0 translate-y-2 p-5 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-forest-300">
-                  {project.category}
+                <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-brand-300">
+                  {project.categories[0]}
+                </span>
+                <span className="mt-1 block font-serif text-lg text-sand-50">
+                  {project.label}
                 </span>
               </div>
             </Reveal>

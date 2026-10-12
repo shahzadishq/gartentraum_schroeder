@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import Reveal from './Reveal';
 import { site } from '@/lib/site';
-import { PhoneIcon, MailIcon, MapPinIcon, ArrowRightIcon } from './icons';
+import { asset } from '@/lib/asset';
+import { PhoneIcon, MailIcon, MapPinIcon, ArrowRightIcon, WhatsAppIcon } from './icons';
 
 export default function CTA() {
   return (
@@ -9,8 +10,8 @@ export default function CTA() {
       {/* Background */}
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=2000&q=80"
-          alt="Hochwertig angelegter Garten in der Abenddämmerung"
+          src={asset('/images/pool.jpg')}
+          alt="Moderne Poolanlage von Gartentraum Schröder"
           fill
           sizes="100vw"
           className="object-cover object-center"
@@ -58,6 +59,22 @@ export default function CTA() {
                     E-Mail
                   </span>
                   <span className="font-medium">{site.email}</span>
+                </span>
+              </a>
+              <a
+                href={site.whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-4 text-sand-100 transition-colors hover:text-white"
+              >
+                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366]/90 text-white transition-transform group-hover:scale-105">
+                  <WhatsAppIcon className="h-5 w-5" />
+                </span>
+                <span>
+                  <span className="block text-xs uppercase tracking-[0.2em] text-sand-200/60">
+                    WhatsApp
+                  </span>
+                  <span className="font-medium">{site.whatsapp}</span>
                 </span>
               </a>
               <div className="flex items-center gap-4 text-sand-100">

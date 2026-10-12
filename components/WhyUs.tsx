@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Reveal from './Reveal';
+import { asset } from '@/lib/asset';
 import {
   MapPinIcon,
   LeafIcon,
@@ -69,8 +70,8 @@ export default function WhyUs() {
             </p>
             <div className="relative mt-10 aspect-[16/11] overflow-hidden rounded-[2rem] shadow-card">
               <Image
-                src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1200&q=80"
-                alt="Professionell gestalteter, moderner Garten mit Terrasse und Bepflanzung"
+                src={asset('/images/pavers-terrace.jpg')}
+                alt="Hochwertig verlegte Terrassenplatten – Pflasterarbeiten von Gartentraum Schröder"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover transition-transform duration-700 hover:scale-105"

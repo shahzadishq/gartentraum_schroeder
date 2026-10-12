@@ -10,9 +10,10 @@ export const site = {
   location: 'Westoverledingen',
   region: 'Ostfriesland',
   url: 'https://garten-traum-schroeder.de',
-  // Placeholder contact details – replace with the real ones.
-  phone: '+49 (0) 000 000000',
-  phoneHref: 'tel:+490000000000',
+  phone: '+49 15562 320387',
+  phoneHref: 'tel:+4915562320387',
+  whatsapp: '+49 1525 5829796',
+  whatsappHref: 'https://wa.me/4915255829796',
   email: 'info@garten-traum-schroeder.de',
   emailHref: 'mailto:info@garten-traum-schroeder.de',
   address: {
