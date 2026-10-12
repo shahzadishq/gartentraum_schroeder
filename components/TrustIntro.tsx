@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Reveal from './Reveal';
+import Parallax from './Parallax';
 import { asset } from '@/lib/asset';
 import { CheckIcon } from './icons';
 
@@ -18,13 +19,15 @@ export default function TrustIntro() {
           {/* Image collage */}
           <Reveal className="relative">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-card">
-              <Image
-                src={asset('/images/owner.jpg')}
-                alt="Inhaber von Gartentraum Schröder beim Verlegen von Rollrasen"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover transition-transform duration-700 hover:scale-105"
-              />
+              <Parallax speed={28} className="absolute inset-x-0 -inset-y-10">
+                <Image
+                  src={asset('/images/owner.jpg')}
+                  alt="Inhaber von Gartentraum Schröder beim Verlegen von Rollrasen"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </Parallax>
             </div>
             {/* Floating stat card */}
             <div className="absolute -bottom-6 -right-2 w-48 rounded-2xl bg-forest-800 p-6 text-sand-50 shadow-card sm:-right-6">

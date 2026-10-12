@@ -86,7 +86,40 @@
     transition: none;
   }
   .animate-slow-zoom,
-  .animate-float {
+  .animate-float,
+  .animate-marquee,
+  .animate-shimmer,
+  .animate-pop-in {
     animation: none !important;
+  }
+}
+
+/* Parallax layer – transform driven by JS, smoothed by the browser. */
+.parallax {
+  will-change: transform;
+}
+
+/* Soft shadow to lift hero text off bright photography. */
+.hero-text-shadow {
+  text-shadow: 0 2px 24px rgba(15, 26, 19, 0.55), 0 1px 4px rgba(15, 26, 19, 0.4);
+}
+
+/* Hand-drawn underline that draws itself in on load. */
+.hero-underline path {
+  stroke-dasharray: 320;
+  stroke-dashoffset: 320;
+  animation: draw-underline 1s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards;
+}
+
+@keyframes draw-underline {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-underline path {
+    animation: none;
+    stroke-dashoffset: 0;
   }
 }

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Reveal from './Reveal';
+import Parallax from './Parallax';
 import { asset } from '@/lib/asset';
 import {
   MapPinIcon,
@@ -69,13 +70,15 @@ export default function WhyUs() {
               man sich zuhause fühlt.
             </p>
             <div className="relative mt-10 aspect-[16/11] overflow-hidden rounded-[2rem] shadow-card">
-              <Image
-                src={asset('/images/pavers-terrace.jpg')}
-                alt="Hochwertig verlegte Terrassenplatten – Pflasterarbeiten von Gartentraum Schröder"
-                fill
-                sizes="(max-width: 1024px) 100vw, 40vw"
-                className="object-cover transition-transform duration-700 hover:scale-105"
-              />
+              <Parallax speed={26} className="absolute inset-x-0 -inset-y-10">
+                <Image
+                  src={asset('/images/garden-lawn.webp')}
+                  alt="Gepflegter Garten mit Rasen, Hecke und Terrasse – umgesetzt von Gartentraum Schröder"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover"
+                />
+              </Parallax>
             </div>
           </Reveal>
 

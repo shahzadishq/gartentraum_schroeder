@@ -81,11 +81,26 @@ const config: Config = {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
         },
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        shimmer: {
+          '0%': { transform: 'translateX(-120%)' },
+          '100%': { transform: 'translateX(220%)' },
+        },
+        'pop-in': {
+          '0%': { opacity: '0', transform: 'scale(0.6)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
       },
       animation: {
         'fade-up': 'fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-        'slow-zoom': 'slow-zoom 18s ease-out forwards',
+        'slow-zoom': 'slow-zoom 20s ease-out forwards',
         float: 'float 6s ease-in-out infinite',
+        marquee: 'marquee 32s linear infinite',
+        shimmer: 'shimmer 2.5s ease-in-out infinite',
+        'pop-in': 'pop-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards',
       },
     },
   },
