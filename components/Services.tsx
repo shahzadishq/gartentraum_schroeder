@@ -78,9 +78,9 @@ export default function Services() {
             const Icon = service.icon;
             return (
               <Reveal key={service.title} delay={(i % 3) * 90}>
-                <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-sand-50/10 bg-forest-900/60 p-8 transition-all duration-500 hover:-translate-y-1.5 hover:border-forest-400/40 hover:bg-forest-800/70">
-                  <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-forest-700/60 text-forest-200 transition-colors duration-500 group-hover:bg-forest-400 group-hover:text-forest-950">
-                    <Icon className="h-7 w-7" />
+                <article className="group moving-border relative flex h-full flex-col rounded-3xl border border-sand-50/10 bg-forest-900/60 p-8 transition-all duration-500 hover:-translate-y-1.5 hover:border-transparent hover:bg-forest-800/70 hover:shadow-card">
+                  <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-forest-700/60 text-forest-200 transition-all duration-500 group-hover:scale-110 group-hover:bg-brand-400 group-hover:text-forest-950">
+                    <Icon className="h-7 w-7 transition-transform duration-700 ease-out group-hover:rotate-[360deg]" />
                   </span>
                   <h3 className="mt-6 font-serif text-xl font-medium text-sand-50">
                     {service.title}

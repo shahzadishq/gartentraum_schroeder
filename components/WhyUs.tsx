@@ -89,10 +89,10 @@ export default function WhyUs() {
                 return (
                   <div
                     key={reason.title}
-                    className="rounded-2xl border border-sand-50/10 bg-forest-800/40 p-6 transition-all duration-500 hover:border-forest-400/40 hover:bg-forest-800/70"
+                    className="group moving-border relative rounded-2xl border border-sand-50/10 bg-forest-800/40 p-6 transition-all duration-500 hover:-translate-y-1.5 hover:border-transparent hover:bg-forest-800/80 hover:shadow-card"
                   >
-                    <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-forest-700/60 text-forest-200">
-                      <Icon className="h-6 w-6" />
+                    <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-forest-700/60 text-forest-200 transition-all duration-500 group-hover:scale-110 group-hover:bg-brand-400 group-hover:text-forest-950">
+                      <Icon className="h-6 w-6 transition-transform duration-700 ease-out group-hover:rotate-[360deg]" />
                     </span>
                     <h3 className="mt-4 font-serif text-lg font-medium text-sand-50">
                       {reason.title}
