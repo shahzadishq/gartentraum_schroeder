@@ -24,14 +24,18 @@ export default function Navbar() {
     };
   }, [open]);
 
+  // When the menu is open the header stays transparent with the white logo so
+  // it blends into the dark overlay (and no backdrop-blur, which would make the
+  // header a containing block for the fixed overlay).
+  const lightHeader = scrolled && !open;
+
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? 'bg-sand-50/90 shadow-soft backdrop-blur-md'
-          : 'bg-transparent'
-      }`}
-    >
+    <>
+      <header
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+          lightHeader ? 'bg-sand-50/95 shadow-soft backdrop-blur-md' : 'bg-transparent'
+        }`}
+      >
       <nav
         aria-label="Hauptnavigation"
         className="container-content section-padding flex h-[72px] items-center justify-between lg:h-[88px]"
@@ -39,7 +43,7 @@ export default function Navbar() {
         <a href="#hero" aria-label="Gartentraum Schröder – Startseite" className="flex items-center">
           <Logo
             priority
-            variant={scrolled ? 'color' : 'white'}
+            variant={lightHeader ? 'color' : 'white'}
             className="h-9 w-auto lg:h-11"
           />
         </a>
@@ -47,7 +51,7 @@ export default function Navbar() {
         {/* Desktop links */}
         <ul
           className={`hidden items-center gap-8 lg:flex ${
-            scrolled ? 'text-forest-800' : 'text-sand-50'
+            lightHeader ? 'text-forest-800' : 'text-sand-50'
           }`}
         >
           {navLinks.map((link) => (
@@ -70,7 +74,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             aria-label="WhatsApp"
             className={`flex h-10 w-10 items-center justify-center rounded-full transition-colors ${
-              scrolled
+              lightHeader
                 ? 'text-forest-700 hover:bg-brand-50 hover:text-brand-600'
                 : 'text-sand-100 hover:bg-sand-50/10'
             }`}
@@ -81,7 +85,7 @@ export default function Navbar() {
             href={site.phoneHref}
             aria-label="Anrufen"
             className={`flex h-10 w-10 items-center justify-center rounded-full transition-colors ${
-              scrolled
+              lightHeader
                 ? 'text-forest-700 hover:bg-brand-50 hover:text-brand-600'
                 : 'text-sand-100 hover:bg-sand-50/10'
             }`}
@@ -100,9 +104,9 @@ export default function Navbar() {
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? 'Menü schließen' : 'Menü öffnen'}
-          className={`relative z-50 flex h-11 w-11 items-center justify-center rounded-full transition-colors lg:hidden ${
-            open || scrolled ? 'text-forest-800' : 'text-sand-50'
-          } ${open ? '!text-sand-50' : ''}`}
+          className={`relative z-[60] flex h-11 w-11 items-center justify-center rounded-full transition-colors lg:hidden ${
+            lightHeader ? 'text-forest-800' : 'text-sand-50'
+          }`}
         >
           <span className="relative block h-4 w-6">
             <span
@@ -123,17 +127,17 @@ export default function Navbar() {
           </span>
         </button>
       </nav>
+      </header>
 
-      {/* Mobile menu */}
+      {/* Mobile menu – rendered outside <header> so the sticky header's
+          backdrop-blur doesn't turn it into the overlay's containing block. */}
       <div
         id="mobile-menu"
         className={`fixed inset-0 z-40 overflow-y-auto overflow-x-hidden bg-forest-950 transition-opacity duration-300 lg:hidden ${
           open ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'
         }`}
       >
-        <div className="mx-auto flex min-h-full w-full max-w-sm flex-col px-6 pb-12 pt-24">
-          <Logo variant="white" className="mb-10 h-9 w-auto self-start" />
-
+        <div className="mx-auto flex min-h-full w-full max-w-sm flex-col px-6 pb-12 pt-28">
           <ul className="w-full">
             {navLinks.map((link) => (
               <li key={link.href}>
@@ -173,6 +177,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-    </header>
+    </>
   );
 }
