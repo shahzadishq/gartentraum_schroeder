@@ -130,8 +130,8 @@ export default function Gallery() {
               onClick={() => setActive(cat)}
               className={`rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-300 ${
                 active === cat
-                  ? 'bg-forest-700 text-sand-50 shadow-soft'
-                  : 'border border-forest-700/15 text-forest-700 hover:border-forest-700/40 hover:bg-forest-700/5'
+                  ? 'bg-clay text-sand-50 shadow-soft'
+                  : 'border border-clay/20 text-clay hover:border-clay/40 hover:bg-clay/5'
               }`}
             >
               {cat}

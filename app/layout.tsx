@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
-import { Jost, Inter } from 'next/font/google';
+import { Questrial, Inter } from 'next/font/google';
 import { site } from '@/lib/site';
 import './globals.css';
 
-// Jost is a geometric (Futura-style) sans that closely matches the
-// Gartentraum Schröder logo wordmark. Loaded into --font-heading.
-const heading = Jost({
+// Questrial is a geometric sans that matches the Gartentraum Schröder
+// logo wordmark. Single weight (400). Loaded into --font-heading.
+const heading = Questrial({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['400'],
   variable: '--font-heading',
   display: 'swap',
 });

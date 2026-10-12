@@ -37,7 +37,7 @@ export default function CTA() {
                 href={site.phoneHref}
                 className="group flex items-center gap-4 text-sand-100 transition-colors hover:text-white"
               >
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-forest-800/70 text-forest-200 transition-colors group-hover:bg-forest-400 group-hover:text-forest-950">
+                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-black/20 text-sand-100 transition-colors group-hover:bg-brand-400 group-hover:text-[#3a2817]">
                   <PhoneIcon className="h-5 w-5" />
                 </span>
                 <span>
@@ -51,7 +51,7 @@ export default function CTA() {
                 href={site.emailHref}
                 className="group flex items-center gap-4 text-sand-100 transition-colors hover:text-white"
               >
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-forest-800/70 text-forest-200 transition-colors group-hover:bg-forest-400 group-hover:text-forest-950">
+                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-black/20 text-sand-100 transition-colors group-hover:bg-brand-400 group-hover:text-[#3a2817]">
                   <MailIcon className="h-5 w-5" />
                 </span>
                 <span>
@@ -67,7 +67,7 @@ export default function CTA() {
                 rel="noopener noreferrer"
                 className="group flex items-center gap-4 text-sand-100 transition-colors hover:text-white"
               >
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-forest-800/70 text-forest-200 transition-colors group-hover:bg-forest-400 group-hover:text-forest-950">
+                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-black/20 text-sand-100 transition-colors group-hover:bg-brand-400 group-hover:text-[#3a2817]">
                   <WhatsAppIcon className="h-5 w-5" />
                 </span>
                 <span>
@@ -78,7 +78,7 @@ export default function CTA() {
                 </span>
               </a>
               <div className="flex items-center gap-4 text-sand-100">
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-forest-800/70 text-forest-200">
+                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-black/20 text-sand-100">
                   <MapPinIcon className="h-5 w-5" />
                 </span>
                 <span>
