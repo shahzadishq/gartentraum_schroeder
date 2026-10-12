@@ -40,21 +40,23 @@ const config: Config = {
           light: '#b7b2a6',
           dark: '#5f5b50',
         },
-        // Fresh brand green sampled from the Gartentraum Schröder logo.
+        // Green scale sampled from the Gartentraum Schröder logo tree.
+        // Anchors: 400 #89C541 (lime), 600 #5F8339 (main), 700 #4D6A34,
+        // 800 #445729 (deep) — all taken directly from the logo.
         brand: {
           50: '#f3f8e8',
-          100: '#e4f0cb',
+          100: '#e6f1cc',
           200: '#cbe29a',
-          300: '#acce38',
-          400: '#8cbf3f',
-          500: '#6f9f3c',
-          600: '#5f8a34',
-          700: '#4c6a31',
-          800: '#435729',
+          300: '#a7d24e',
+          400: '#89c541',
+          500: '#6f9b3b',
+          600: '#5f8339',
+          700: '#4d6a34',
+          800: '#445729',
           900: '#33421f',
         },
-        // Earthy brown from the logo wordmark / tree trunk.
-        clay: '#7a5230',
+        // Earthy browns from the logo wordmark / tree trunk.
+        clay: '#885f41',
         bark: '#5e3c1e',
       },
       fontFamily: {
