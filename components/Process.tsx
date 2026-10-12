@@ -87,7 +87,7 @@ export default function Process() {
           {/* Scroll-driven fill bar (desktop) */}
           <div
             aria-hidden
-            className="absolute left-0 top-[39px] hidden h-1 rounded-full bg-gradient-to-r from-brand-500 to-forest-700 shadow-[0_0_12px_rgba(95,138,52,0.5)] lg:block"
+            className="absolute left-0 top-[39px] hidden h-1 rounded-full bg-brand-500 shadow-[0_0_12px_rgba(95,131,57,0.5)] lg:block"
             style={{ width: `${progress * 100}%` }}
           />
 
@@ -98,7 +98,7 @@ export default function Process() {
           />
           <div
             aria-hidden
-            className="absolute left-[39px] top-0 w-1 rounded-full bg-gradient-to-b from-brand-500 to-forest-700 sm:hidden"
+            className="absolute left-[39px] top-0 w-1 rounded-full bg-brand-500 sm:hidden"
             style={{ height: `${progress * 100}%` }}
           />
 

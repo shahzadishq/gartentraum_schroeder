@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
-import { Playfair_Display, Inter } from 'next/font/google';
+import { Quicksand, Inter } from 'next/font/google';
 import { site } from '@/lib/site';
 import './globals.css';
 
-const playfair = Playfair_Display({
+// Quicksand is a geometric, slightly rounded sans that echoes the
+// Gartentraum Schröder logo wordmark. Loaded into --font-heading.
+const heading = Quicksand({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
-  variable: '--font-playfair',
+  variable: '--font-heading',
   display: 'swap',
 });
 
@@ -117,7 +119,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="de" className={`${playfair.variable} ${inter.variable}`}>
+    <html lang="de" className={`${heading.variable} ${inter.variable}`}>
       <body>
         <script
           type="application/ld+json"

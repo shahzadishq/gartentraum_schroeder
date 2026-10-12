@@ -60,7 +60,9 @@ const config: Config = {
         bark: '#5e3c1e',
       },
       fontFamily: {
-        serif: ['var(--font-playfair)', 'Georgia', 'serif'],
+        // "serif" utility name kept for churn-free usage; now the geometric
+        // heading font (Quicksand) that matches the logo wordmark.
+        serif: ['var(--font-heading)', 'system-ui', 'sans-serif'],
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
       },
       maxWidth: {
