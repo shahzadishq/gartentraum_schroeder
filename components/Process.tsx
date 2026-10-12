@@ -87,7 +87,7 @@ export default function Process() {
           {/* Scroll-driven fill bar (desktop) */}
           <div
             aria-hidden
-            className="absolute left-0 top-[39px] hidden h-1 rounded-full bg-brand-500 shadow-[0_0_12px_rgba(95,131,57,0.5)] lg:block"
+            className="absolute left-0 top-[39px] hidden h-1 rounded-full bg-brand-400 shadow-[0_0_12px_rgba(127,177,66,0.5)] lg:block"
             style={{ width: `${progress * 100}%` }}
           />
 
@@ -98,7 +98,7 @@ export default function Process() {
           />
           <div
             aria-hidden
-            className="absolute left-[39px] top-0 w-1 rounded-full bg-brand-500 sm:hidden"
+            className="absolute left-[39px] top-0 w-1 rounded-full bg-brand-400 sm:hidden"
             style={{ height: `${progress * 100}%` }}
           />
 
@@ -111,7 +111,7 @@ export default function Process() {
                     <span
                       className={`absolute left-0 top-0 z-10 flex h-20 w-20 items-center justify-center rounded-full border font-serif text-2xl font-semibold shadow-soft transition-all duration-500 sm:relative sm:left-auto sm:top-auto ${
                         active
-                          ? 'scale-105 border-brand-500 bg-brand-500 text-white shadow-card'
+                          ? 'scale-105 border-brand-400 bg-brand-400 text-white shadow-card'
                           : 'border-forest-200 bg-sand-50 text-forest-700'
                       }`}
                     >

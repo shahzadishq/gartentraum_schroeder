@@ -16,7 +16,7 @@ export default function CTA() {
           sizes="100vw"
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-forest-950/90" />
+        <div className="absolute inset-0 bg-bark/90" />
       </div>
 
       <div className="container-content section-padding relative">
