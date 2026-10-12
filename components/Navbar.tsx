@@ -127,41 +127,47 @@ export default function Navbar() {
       {/* Mobile menu */}
       <div
         id="mobile-menu"
-        className={`fixed inset-0 top-0 z-40 flex flex-col bg-forest-900/98 backdrop-blur-lg transition-all duration-500 lg:hidden ${
+        className={`fixed inset-0 z-40 overflow-y-auto overflow-x-hidden bg-forest-950 transition-opacity duration-300 lg:hidden ${
           open ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'
         }`}
       >
-        <div className="flex h-full flex-col justify-center px-8 pt-20">
-          <Logo variant="white" className="mb-10 h-10 w-auto" />
-          <ul className="space-y-2">
-            {navLinks.map((link, i) => (
+        <div className="mx-auto flex min-h-full w-full max-w-sm flex-col px-6 pb-12 pt-24">
+          <Logo variant="white" className="mb-10 h-9 w-auto self-start" />
+
+          <ul className="w-full">
+            {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block border-b border-sand-50/10 py-4 font-serif text-2xl text-sand-50 transition-colors hover:text-brand-300"
-                  style={{ transitionDelay: `${i * 40}ms` }}
+                  className="block w-full border-b border-sand-50/10 py-4 font-serif text-2xl text-sand-50 transition-colors active:text-brand-300 hover:text-brand-300"
                 >
                   {link.label}
                 </a>
               </li>
             ))}
           </ul>
-          <div className="mt-10 space-y-3">
-            <a href="#kontakt" onClick={() => setOpen(false)} className="btn-light w-full">
+
+          <div className="mt-10 w-full space-y-3">
+            <a href="#kontakt" onClick={() => setOpen(false)} className="btn-primary w-full">
               Kostenlose Beratung anfragen
             </a>
             <div className="grid grid-cols-2 gap-3">
-              <a href={site.phoneHref} className="btn-ghost-light">
-                <PhoneIcon className="h-4 w-4" /> Anrufen
+              <a
+                href={site.phoneHref}
+                onClick={() => setOpen(false)}
+                className="btn-ghost-light w-full !px-2"
+              >
+                <PhoneIcon className="h-4 w-4 shrink-0" /> Anrufen
               </a>
               <a
                 href={site.whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-ghost-light"
+                onClick={() => setOpen(false)}
+                className="btn-ghost-light w-full !px-2"
               >
-                <WhatsAppIcon className="h-4 w-4" /> WhatsApp
+                <WhatsAppIcon className="h-4 w-4 shrink-0" /> WhatsApp
               </a>
             </div>
           </div>
