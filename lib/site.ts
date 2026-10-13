@@ -26,6 +26,9 @@ export const site = {
     facebook:
       'https://web.facebook.com/p/Gartentraum-Schr%C3%B6der-100063633340283/',
   },
+  // Opens the Google listing where customers can leave a review.
+  googleReviewHref:
+    'https://www.google.com/maps/search/?api=1&query=Gartentraum+Schr%C3%B6der+Westoverledingen',
 } as const;
 
 export const navLinks = [

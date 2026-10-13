@@ -85,20 +85,20 @@ export default function HeroV2() {
           <div className="relative mx-auto w-full max-w-md lg:max-w-none">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border-[6px] border-white shadow-card">
               <Image
-                src={asset('/images/hero.webp')}
-                alt="Hochwertig angelegter Garten mit Natursteinterrasse und Rasen"
+                src={asset('/images/team-portrait.webp')}
+                alt="Mitarbeiter von Gartentraum Schröder mit frischem Rollrasen"
                 fill
                 priority
                 sizes="(max-width: 1024px) 90vw, 42vw"
-                className="object-cover"
+                className="object-cover object-top"
               />
             </div>
 
             {/* second overlapping image */}
             <div className="absolute -bottom-8 -left-6 h-44 w-36 overflow-hidden rounded-2xl border-[6px] border-white shadow-card sm:h-52 sm:w-44">
               <Image
-                src={asset('/images/pool-stone.webp')}
-                alt="Pool mit Natursteineinfassung"
+                src={asset('/images/work-paving-backyard.webp')}
+                alt="Mitarbeiter verlegt Pflastersteine auf einer Terrasse"
                 fill
                 sizes="12rem"
                 className="object-cover"

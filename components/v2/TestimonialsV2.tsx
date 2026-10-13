@@ -1,6 +1,7 @@
 import Reveal from '@/components/Reveal';
 import { StarIcon } from '@/components/icons';
 import { reviews, initials, type Review } from '@/lib/reviews';
+import ReviewCTA from '@/components/ReviewCTA';
 import { LeafDecor } from './LeafDecor';
 
 const row1 = reviews.slice(0, 6);
@@ -8,7 +9,7 @@ const row2 = reviews.slice(6);
 
 function Card({ review }: { review: Review }) {
   return (
-    <figure className="flex w-[300px] shrink-0 flex-col rounded-3xl bg-white p-6 shadow-soft sm:w-[360px]">
+    <figure className="flex w-[300px] shrink-0 flex-col rounded-3xl border border-forest-900/8 bg-white p-6 shadow-soft sm:w-[360px]">
       <div className="flex items-center gap-3">
         <span className="flex h-11 w-11 items-center justify-center rounded-full bg-clay text-sm font-semibold text-sand-50">
           {initials(review.name)}
@@ -35,9 +36,9 @@ function Card({ review }: { review: Review }) {
 function Marquee({ items, reverse }: { items: Review[]; reverse?: boolean }) {
   const loop = [...items, ...items];
   return (
-    <div className="group overflow-hidden py-3">
+    <div className="overflow-hidden py-3">
       <div
-        className="flex w-max gap-6 animate-marquee group-hover:[animation-play-state:paused]"
+        className="flex w-max gap-6 animate-marquee"
         style={{ animationDuration: '60s', animationDirection: reverse ? 'reverse' : 'normal' }}
       >
         {loop.map((r, i) => (
@@ -52,9 +53,9 @@ export default function TestimonialsV2() {
   return (
     <section
       id="bewertungen"
-      className="relative overflow-hidden bg-sand-100 py-24 lg:py-32"
+      className="relative overflow-hidden bg-white py-24 lg:py-32"
     >
-      <LeafDecor className="pointer-events-none absolute -right-20 top-6 hidden h-32 w-64 text-brand-500/15 lg:block" />
+      <LeafDecor className="pointer-events-none absolute -right-20 top-6 hidden h-32 w-64 text-brand-500/12 lg:block" />
 
       <Reveal className="container-content section-padding mb-14 text-center">
         <span className="eyebrow mb-5 justify-center text-brand-600">Kundenstimmen</span>
@@ -78,6 +79,10 @@ export default function TestimonialsV2() {
         <Marquee items={row1} />
         <Marquee items={row2} reverse />
       </div>
+
+      <Reveal className="container-content section-padding mt-16">
+        <ReviewCTA />
+      </Reveal>
     </section>
   );
 }
