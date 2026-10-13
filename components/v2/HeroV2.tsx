@@ -85,20 +85,20 @@ export default function HeroV2() {
           <div className="relative mx-auto w-full max-w-md lg:max-w-none">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border-[6px] border-white shadow-card">
               <Image
-                src={asset('/images/team-portrait.webp')}
-                alt="Mitarbeiter von Gartentraum Schröder mit frischem Rollrasen"
+                src={asset('/images/hero-grinder.webp')}
+                alt="Mitarbeiter von Gartentraum Schröder schneidet einen Pflasterstein mit dem Trennschleifer"
                 fill
                 priority
                 sizes="(max-width: 1024px) 90vw, 42vw"
-                className="object-cover object-top"
+                className="object-cover"
               />
             </div>
 
             {/* second overlapping image */}
             <div className="absolute -bottom-8 -left-6 h-44 w-36 overflow-hidden rounded-2xl border-[6px] border-white shadow-card sm:h-52 sm:w-44">
               <Image
-                src={asset('/images/work-paving-backyard.webp')}
-                alt="Mitarbeiter verlegt Pflastersteine auf einer Terrasse"
+                src={asset('/images/hero-carry.webp')}
+                alt="Mitarbeiter von Gartentraum Schröder trägt einen Pflasterstein auf der Baustelle"
                 fill
                 sizes="12rem"
                 className="object-cover"

@@ -14,7 +14,6 @@ const tiles: Tile[] = [
   { src: '/images/work-trimmer.webp', label: 'Gartenpflege', span: '' },
   { src: '/images/front-garden.webp', label: 'Vorgärten', span: '' },
   { src: '/images/work-hedge-lift.webp', label: 'Baum- & Heckenpflege', span: 'col-span-2' },
-  { src: '/images/new-lawn-house.webp', label: 'Rollrasen', span: '' },
 ];
 
 export default function ProjectsV2() {

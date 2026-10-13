@@ -47,9 +47,9 @@ const config: Config = {
           50: '#f3f8e8',
           100: '#e6f1cc',
           200: '#cbe29a',
-          300: '#7fb142', // fresh green (logo) – accent on dark
-          400: '#7fb142', // fresh green (logo)
-          500: '#7fb142', // fresh green (logo) – primary accent / hovers
+          300: '#89c541', // fresh lime (logo) – accent on dark
+          400: '#89c541', // fresh lime (logo)
+          500: '#89c541', // fresh lime (logo) – primary accent / hovers
           600: '#4d6a34', // olive (logo) – readable green on light
           700: '#445729', // deep forest (logo)
           800: '#374820',
