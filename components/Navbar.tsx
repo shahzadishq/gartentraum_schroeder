@@ -5,7 +5,7 @@ import { navLinks, site } from '@/lib/site';
 import Logo from './Logo';
 import { PhoneIcon, WhatsAppIcon } from './icons';
 
-export default function Navbar() {
+export default function Navbar({ lightHero = false }: { lightHero?: boolean }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -27,13 +27,17 @@ export default function Navbar() {
   // When the menu is open the header stays transparent with the white logo so
   // it blends into the dark overlay (and no backdrop-blur, which would make the
   // header a containing block for the fixed overlay).
-  const lightHeader = scrolled && !open;
+  // `solidHeader` controls the header background (solid once scrolled).
+  // `darkText` controls logo/text colour: dark on a light hero or once
+  // scrolled, white while over a dark hero or when the menu is open.
+  const solidHeader = scrolled && !open;
+  const lightHeader = (scrolled || lightHero) && !open;
 
   return (
     <>
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-          lightHeader ? 'bg-sand-50/95 shadow-soft backdrop-blur-md' : 'bg-transparent'
+          solidHeader ? 'bg-sand-50/95 shadow-soft backdrop-blur-md' : 'bg-transparent'
         }`}
       >
       <nav
