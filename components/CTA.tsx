@@ -37,7 +37,7 @@ export default function CTA() {
                 href={site.phoneHref}
                 className="group flex items-center gap-4 text-sand-100 transition-colors hover:text-white"
               >
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-black/20 text-sand-100 transition-colors group-hover:bg-brand-400 group-hover:text-[#3a2817]">
+                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-black/20 text-sand-100 transition-colors group-hover:bg-brand-400 group-hover:text-[#1d2e22]">
                   <PhoneIcon className="h-5 w-5" />
                 </span>
                 <span>
@@ -51,7 +51,7 @@ export default function CTA() {
                 href={site.emailHref}
                 className="group flex items-center gap-4 text-sand-100 transition-colors hover:text-white"
               >
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-black/20 text-sand-100 transition-colors group-hover:bg-brand-400 group-hover:text-[#3a2817]">
+                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-black/20 text-sand-100 transition-colors group-hover:bg-brand-400 group-hover:text-[#1d2e22]">
                   <MailIcon className="h-5 w-5" />
                 </span>
                 <span>
@@ -67,7 +67,7 @@ export default function CTA() {
                 rel="noopener noreferrer"
                 className="group flex items-center gap-4 text-sand-100 transition-colors hover:text-white"
               >
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-black/20 text-sand-100 transition-colors group-hover:bg-brand-400 group-hover:text-[#3a2817]">
+                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-black/20 text-sand-100 transition-colors group-hover:bg-brand-400 group-hover:text-[#1d2e22]">
                   <WhatsAppIcon className="h-5 w-5" />
                 </span>
                 <span>
@@ -145,7 +145,9 @@ export default function CTA() {
                     <option>Pflasterarbeiten</option>
                     <option>Poolbau & Außenbereiche</option>
                     <option>Terrassen & Gestaltung</option>
-                    <option>Pflege & Sonstiges</option>
+                    <option>Zäune & Tore</option>
+                    <option>Rollrasen & Rasenflächen</option>
+                    <option>Gartenpflege</option>
                   </select>
                 </div>
                 <div>

@@ -52,6 +52,18 @@ const projects: Project[] = [
     categories: ['Pflasterarbeiten', 'Moderne Gärten'],
   },
   {
+    src: '/images/work-paving-stones.webp',
+    alt: 'Mitarbeiter von Gartentraum Schröder verlegt Pflastersteine von Hand',
+    label: 'Pflasterarbeiten im Einsatz',
+    categories: ['Pflasterarbeiten'],
+  },
+  {
+    src: '/images/work-excavator.webp',
+    alt: 'Mitarbeiter von Gartentraum Schröder bei Erdarbeiten mit dem Minibagger',
+    label: 'Erdarbeiten mit Minibagger',
+    categories: ['Gartenneugestaltung'],
+  },
+  {
     src: '/images/lawn-firepit.webp',
     alt: 'Gepflegter Rasen mit Lounge- und Feuerstellenbereich auf Kies',
     label: 'Outdoor-Living mit Feuerstelle',

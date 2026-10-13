@@ -6,6 +6,8 @@ import {
   PoolIcon,
   DeckIcon,
   SproutIcon,
+  FenceIcon,
+  GrassIcon,
   ArrowRightIcon,
 } from './icons';
 
@@ -41,10 +43,22 @@ const services = [
     points: ['Holz, Stein & WPC', 'Lounge- & Essbereiche'],
   },
   {
+    icon: FenceIcon,
+    title: 'Zäune & Tore',
+    text: 'Maßgefertigte Zäune und Tore für Sichtschutz, Sicherheit und einen sauberen Abschluss.',
+    points: ['Doppelstab- & Sichtschutzzäune', 'Ein- & Doppelflügeltore'],
+  },
+  {
+    icon: GrassIcon,
+    title: 'Rollrasen & Rasenflächen',
+    text: 'Dichter, sattgrüner Rasen in kürzester Zeit – fachgerecht verlegt und angewachsen.',
+    points: ['Rollrasen & Neuansaat', 'Bodenvorbereitung & Kantenborde'],
+  },
+  {
     icon: SproutIcon,
-    title: 'Pflege & weitere Gartenlösungen',
-    text: 'Damit Ihr Garten dauerhaft schön bleibt – von der Pflege bis zu Sonderlösungen.',
-    points: ['Regelmäßige Gartenpflege', 'Individuelle Zusatzleistungen'],
+    title: 'Gartenpflege',
+    text: 'Damit Ihr Garten dauerhaft schön bleibt – von regelmäßiger Pflege bis zu Sonderlösungen.',
+    points: ['Hecken-, Baum- & Rasenpflege', 'Individuelle Zusatzleistungen'],
   },
 ];
 
@@ -79,7 +93,7 @@ export default function Services() {
             return (
               <Reveal key={service.title} delay={(i % 3) * 90}>
                 <article className="group moving-border relative flex h-full flex-col rounded-3xl border border-sand-50/15 bg-black/15 p-8 transition-all duration-500 hover:-translate-y-1.5 hover:border-transparent hover:bg-black/25 hover:shadow-card">
-                  <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-black/20 text-sand-100 transition-all duration-500 group-hover:scale-110 group-hover:bg-brand-300 group-hover:text-[#3a2817]">
+                  <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-black/20 text-sand-100 transition-all duration-500 group-hover:scale-110 group-hover:bg-brand-300 group-hover:text-[#1d2e22]">
                     <Icon className="h-7 w-7 transition-transform duration-700 ease-out group-hover:rotate-[360deg]" />
                   </span>
                   <h3 className="mt-6 font-serif text-xl font-medium text-sand-50">

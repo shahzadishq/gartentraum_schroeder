@@ -81,6 +81,29 @@ export function SproutIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
+export function FenceIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M6 21V7l2-2 2 2v14" />
+      <path d="M14 21V7l2-2 2 2v14" />
+      <path d="M3 10h18" />
+      <path d="M3 15h18" />
+    </svg>
+  );
+}
+
+export function GrassIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M7 21c0-4-1-6-3-8 3 0 5 2 5 5" />
+      <path d="M12 21V9" />
+      <path d="M12 13c0-4 1-6 3-8 1 3 0 6-3 8" />
+      <path d="M12 15c0-3-1-5-3-7" />
+      <path d="M17 21c0-4 1-6 3-8-3 0-5 2-5 5" />
+    </svg>
+  );
+}
+
 export function CheckIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg {...base} {...props}>

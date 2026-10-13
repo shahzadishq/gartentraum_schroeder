@@ -42,7 +42,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-sand-50/15 text-sand-200 transition-all hover:border-brand-400 hover:bg-brand-400 hover:text-[#3a2817]"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-sand-50/15 text-sand-200 transition-all hover:border-brand-400 hover:bg-brand-400 hover:text-[#1d2e22]"
               >
                 <InstagramIcon className="h-5 w-5" />
               </a>
@@ -51,7 +51,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-sand-50/15 text-sand-200 transition-all hover:border-brand-400 hover:bg-brand-400 hover:text-[#3a2817]"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-sand-50/15 text-sand-200 transition-all hover:border-brand-400 hover:bg-brand-400 hover:text-[#1d2e22]"
               >
                 <FacebookIcon className="h-5 w-5" />
               </a>
@@ -60,7 +60,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-sand-50/15 text-sand-200 transition-all hover:border-brand-400 hover:bg-brand-400 hover:text-[#3a2817]"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-sand-50/15 text-sand-200 transition-all hover:border-brand-400 hover:bg-brand-400 hover:text-[#1d2e22]"
               >
                 <WhatsAppIcon className="h-5 w-5" />
               </a>
@@ -149,7 +149,7 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-            <a href="#kontakt" className="btn-primary mt-6 !px-6 !py-3 text-[13px]">
+            <a href="#kontakt" className="btn-light mt-6 !px-6 !py-3 text-[13px]">
               Beratung anfragen
             </a>
           </div>

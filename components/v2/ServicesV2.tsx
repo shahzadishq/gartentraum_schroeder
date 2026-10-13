@@ -7,14 +7,14 @@ import { ArrowRightIcon } from '@/components/icons';
 import { LeafDecor, Sprig } from './LeafDecor';
 
 const cards = [
-  { a: -63, label: 'Moderne Gärten', img: '/images/garden-lawn.webp' },
-  { a: -45, label: 'Rollrasen', img: '/images/new-lawn-house.webp' },
-  { a: -27, label: 'Pflasterarbeiten', img: '/images/worker-paving.webp' },
-  { a: -9, label: 'Terrassen', img: '/images/hero.webp' },
-  { a: 9, label: 'Poolanlagen', img: '/images/pool-stone.webp' },
+  { a: -63, label: 'Gartenplanung', img: '/images/garden-lawn.webp' },
+  { a: -45, label: 'Landschaftsbau', img: '/images/work-excavator.webp' },
+  { a: -27, label: 'Pflasterarbeiten', img: '/images/work-paving-backyard.webp' },
+  { a: -9, label: 'Poolbau', img: '/images/pool-stone.webp' },
+  { a: 9, label: 'Terrassen', img: '/images/hero.webp' },
   { a: 27, label: 'Zäune & Tore', img: '/images/worker-branded.webp' },
-  { a: 45, label: 'Vorgärten', img: '/images/front-garden.webp' },
-  { a: 63, label: 'Outdoor-Living', img: '/images/lawn-firepit.webp' },
+  { a: 45, label: 'Rollrasen', img: '/images/new-lawn-house.webp' },
+  { a: 63, label: 'Gartenpflege', img: '/images/work-trimmer.webp' },
 ];
 
 export default function ServicesV2() {

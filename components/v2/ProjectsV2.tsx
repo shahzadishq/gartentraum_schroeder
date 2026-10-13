@@ -8,12 +8,12 @@ type Tile = { src: string; label: string; span: string };
 
 const tiles: Tile[] = [
   { src: '/images/garden-lawn.webp', label: 'Moderne Gärten', span: 'col-span-2 row-span-2' },
-  { src: '/images/worker-branded.webp', label: 'Unser Team im Einsatz', span: '' },
+  { src: '/images/work-paving-stones.webp', label: 'Pflasterarbeiten', span: '' },
   { src: '/images/pool-stone.webp', label: 'Poolanlagen', span: '' },
-  { src: '/images/driveway-clinker.webp', label: 'Pflasterarbeiten', span: 'col-span-2' },
-  { src: '/images/worker-paving.webp', label: 'Präzise Handarbeit', span: '' },
+  { src: '/images/work-excavator.webp', label: 'Erd- & Landschaftsbau', span: 'col-span-2' },
+  { src: '/images/work-trimmer.webp', label: 'Gartenpflege', span: '' },
   { src: '/images/front-garden.webp', label: 'Vorgärten', span: '' },
-  { src: '/images/lawn-firepit.webp', label: 'Outdoor-Living', span: 'col-span-2' },
+  { src: '/images/work-hedge-lift.webp', label: 'Baum- & Heckenpflege', span: 'col-span-2' },
   { src: '/images/new-lawn-house.webp', label: 'Rollrasen', span: '' },
 ];
 

@@ -62,21 +62,21 @@ export default function WhyUs() {
           <Reveal>
             <span className="eyebrow mb-5 text-brand-300">Warum Gartentraum Schröder?</span>
             <h2 className="heading-serif text-4xl text-sand-50 sm:text-5xl">
-              Gründe, uns Ihren Garten anzuvertrauen
+              Ihr Garten in besten Händen
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-sand-200/80">
               Wir verbinden handwerkliche Erfahrung mit moderner Planung und
               echter Leidenschaft für Außenräume. Das Ergebnis: Gärten, in denen
               man sich zuhause fühlt.
             </p>
-            <div className="relative mt-10 aspect-[16/11] overflow-hidden rounded-[2rem] shadow-card">
-              <Parallax speed={26} className="absolute inset-x-0 -inset-y-10">
+            <div className="relative mt-10 aspect-[4/5] overflow-hidden rounded-[2rem] shadow-card">
+              <Parallax speed={20} className="absolute inset-x-0 -inset-y-10">
                 <Image
-                  src={asset('/images/garden-lawn.webp')}
-                  alt="Gepflegter Garten mit Rasen, Hecke und Terrasse – umgesetzt von Gartentraum Schröder"
+                  src={asset('/images/team-portrait.webp')}
+                  alt="Mitarbeiter von Gartentraum Schröder mit frischem Rollrasen – Handwerk mit Leidenschaft"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="object-cover"
+                  className="object-cover object-top"
                 />
               </Parallax>
             </div>
@@ -91,7 +91,7 @@ export default function WhyUs() {
                     key={reason.title}
                     className="group moving-border relative rounded-2xl border border-sand-50/15 bg-black/15 p-6 transition-all duration-500 hover:-translate-y-1.5 hover:border-transparent hover:bg-black/25 hover:shadow-card"
                   >
-                    <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-black/20 text-sand-100 transition-all duration-500 group-hover:scale-110 group-hover:bg-brand-300 group-hover:text-[#3a2817]">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-black/20 text-sand-100 transition-all duration-500 group-hover:scale-110 group-hover:bg-brand-300 group-hover:text-[#1d2e22]">
                       <Icon className="h-6 w-6 transition-transform duration-700 ease-out group-hover:rotate-[360deg]" />
                     </span>
                     <h3 className="mt-4 font-serif text-lg font-medium text-sand-50">
