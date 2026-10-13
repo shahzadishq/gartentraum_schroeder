@@ -3,12 +3,12 @@ import ScrollProgress from '@/components/ScrollProgress';
 import HeroV2 from '@/components/v2/HeroV2';
 import TrustIntro from '@/components/TrustIntro';
 import ServicesV2 from '@/components/v2/ServicesV2';
-import Process from '@/components/Process';
-import Gallery from '@/components/Gallery';
+import ProcessV2 from '@/components/v2/ProcessV2';
+import ProjectsV2 from '@/components/v2/ProjectsV2';
 import WhyUs from '@/components/WhyUs';
 import TestimonialsV2 from '@/components/v2/TestimonialsV2';
 import CTA from '@/components/CTA';
-import Footer from '@/components/Footer';
+import FooterV2 from '@/components/v2/FooterV2';
 import WhatsAppFab from '@/components/WhatsAppFab';
 
 export default function V2Home() {
@@ -20,13 +20,13 @@ export default function V2Home() {
         <HeroV2 />
         <TrustIntro />
         <ServicesV2 />
-        <Process />
-        <Gallery />
+        <ProcessV2 />
+        <ProjectsV2 />
         <WhyUs />
         <TestimonialsV2 />
         <CTA />
       </main>
-      <Footer />
+      <FooterV2 />
       <WhatsAppFab />
     </>
   );

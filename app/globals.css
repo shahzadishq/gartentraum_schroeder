@@ -157,14 +157,14 @@
 
 /* ---- v2 fan / arc service section ---- */
 .v2fan {
-  --R: 560px;
-  --cw: 148px;
-  --ch: 178px;
+  --R: 600px;
+  --cw: 180px;
+  --ch: 216px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --cy: calc(var(--ch) / 2 + 20px + var(--R));
   position: relative;
-  height: 620px;
-  max-width: 1200px;
+  height: 680px;
+  max-width: 1240px;
   margin: 0 auto;
 }
 .v2fan__rail {
@@ -233,13 +233,13 @@
 
 @media (max-width: 1100px) {
   .v2fan {
-    --R: 460px;
-    --cw: 126px;
-    --ch: 154px;
-    height: 540px;
+    --R: 480px;
+    --cw: 146px;
+    --ch: 176px;
+    height: 580px;
   }
   .v2fan__say {
-    top: 255px;
+    top: 270px;
   }
 }
 
@@ -275,8 +275,8 @@
     top: auto;
     margin: 0;
     flex: none;
-    width: 150px;
-    height: 180px;
+    width: 172px;
+    height: 208px;
     transform: none !important;
     scroll-snap-align: start;
   }
