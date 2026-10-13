@@ -21,11 +21,11 @@ export default function TrustIntro() {
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-card">
               <Parallax speed={28} className="absolute inset-x-0 -inset-y-10">
                 <Image
-                  src={asset('/images/owner.jpg')}
-                  alt="Inhaber von Gartentraum Schröder beim Verlegen von Rollrasen"
+                  src={asset('/images/team-portrait.webp')}
+                  alt="Mitarbeiter von Gartentraum Schröder mit frischem Rollrasen"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
+                  className="object-cover object-top"
                 />
               </Parallax>
             </div>
@@ -44,8 +44,7 @@ export default function TrustIntro() {
           <Reveal delay={120}>
             <span className="eyebrow mb-5">Gartentraum Schröder</span>
             <h2 className="heading-serif text-4xl sm:text-5xl">
-              Gartenträume entstehen nicht zufällig – sie entstehen durch
-              Planung, Erfahrung und Leidenschaft.
+              Gartenträume entstehen nicht zufällig.
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-forest-700/80">
               Als regionaler Garten- und Landschaftsbaubetrieb in

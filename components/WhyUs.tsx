@@ -62,21 +62,21 @@ export default function WhyUs() {
           <Reveal>
             <span className="eyebrow mb-5 text-brand-300">Warum Gartentraum Schröder?</span>
             <h2 className="heading-serif text-4xl text-sand-50 sm:text-5xl">
-              Ihr Garten in besten Händen
+              Gründe, uns Ihren Garten anzuvertrauen
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-sand-200/80">
               Wir verbinden handwerkliche Erfahrung mit moderner Planung und
               echter Leidenschaft für Außenräume. Das Ergebnis: Gärten, in denen
               man sich zuhause fühlt.
             </p>
-            <div className="relative mt-10 aspect-[4/5] overflow-hidden rounded-[2rem] shadow-card">
-              <Parallax speed={20} className="absolute inset-x-0 -inset-y-10">
+            <div className="relative mt-10 aspect-[16/11] overflow-hidden rounded-[2rem] shadow-card">
+              <Parallax speed={26} className="absolute inset-x-0 -inset-y-10">
                 <Image
-                  src={asset('/images/team-portrait.webp')}
-                  alt="Mitarbeiter von Gartentraum Schröder mit frischem Rollrasen – Handwerk mit Leidenschaft"
+                  src={asset('/images/garden-lawn.webp')}
+                  alt="Gepflegter Garten mit Rasen, Hecke und Terrasse – umgesetzt von Gartentraum Schröder"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="object-cover object-top"
+                  className="object-cover"
                 />
               </Parallax>
             </div>

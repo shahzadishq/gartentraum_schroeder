@@ -22,63 +22,47 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-bark text-sand-200/80">
-      <div className="container-content section-padding py-16 lg:py-20">
+    <footer className="relative overflow-hidden border-t border-forest-900/10 bg-white text-forest-700">
+      <div className="container-content section-padding relative py-16 lg:py-20">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.1fr]">
           {/* Brand */}
           <div>
-            <Logo variant="white" className="h-12 w-auto" />
-            <p className="mt-4 text-[10px] font-medium uppercase tracking-[0.3em] text-brand-300">
+            <Logo className="h-12 w-auto" />
+            <p className="mt-4 text-[10px] font-medium uppercase tracking-[0.3em] text-brand-600">
               {site.tagline} · {site.location}
             </p>
-            <p className="mt-5 max-w-xs text-sm leading-relaxed">
+            <p className="mt-5 max-w-xs text-sm leading-relaxed text-forest-700/80">
               Ihr regionaler Partner für Garten- und Landschaftsbau in
               Westoverledingen. Von der Idee bis zum Traumgarten – Beratung &
               Umsetzung aus einer Hand.
             </p>
             <div className="mt-6 flex gap-3">
-              <a
-                href={site.social.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-sand-50/15 text-sand-200 transition-all hover:border-brand-400 hover:bg-brand-400 hover:text-[#1d2e22]"
-              >
-                <InstagramIcon className="h-5 w-5" />
-              </a>
-              <a
-                href={site.social.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-sand-50/15 text-sand-200 transition-all hover:border-brand-400 hover:bg-brand-400 hover:text-[#1d2e22]"
-              >
-                <FacebookIcon className="h-5 w-5" />
-              </a>
-              <a
-                href={site.whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="WhatsApp"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-sand-50/15 text-sand-200 transition-all hover:border-brand-400 hover:bg-brand-400 hover:text-[#1d2e22]"
-              >
-                <WhatsAppIcon className="h-5 w-5" />
-              </a>
+              {[
+                { href: site.social.instagram, label: 'Instagram', Icon: InstagramIcon },
+                { href: site.social.facebook, label: 'Facebook', Icon: FacebookIcon },
+                { href: site.whatsappHref, label: 'WhatsApp', Icon: WhatsAppIcon },
+              ].map(({ href, label, Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-forest-900/12 text-forest-700 transition-all hover:border-brand-500 hover:bg-brand-500 hover:text-white"
+                >
+                  <Icon className="h-5 w-5" />
+                </a>
+              ))}
             </div>
           </div>
 
           {/* Navigation */}
           <div>
-            <h3 className="font-serif text-base font-semibold text-sand-50">
-              Navigation
-            </h3>
+            <h3 className="font-serif text-base font-semibold text-forest-900">Navigation</h3>
             <ul className="mt-5 space-y-3 text-sm">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <a
-                    href={link.href}
-                    className="transition-colors hover:text-sand-50"
-                  >
+                  <a href={link.href} className="transition-colors hover:text-brand-600">
                     {link.label}
                   </a>
                 </li>
@@ -88,16 +72,11 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-serif text-base font-semibold text-sand-50">
-              Leistungen
-            </h3>
+            <h3 className="font-serif text-base font-semibold text-forest-900">Leistungen</h3>
             <ul className="mt-5 space-y-3 text-sm">
               {services.map((service) => (
                 <li key={service}>
-                  <a
-                    href="#leistungen"
-                    className="transition-colors hover:text-sand-50"
-                  >
+                  <a href="#leistungen" className="transition-colors hover:text-brand-600">
                     {service}
                   </a>
                 </li>
@@ -107,12 +86,10 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-serif text-base font-semibold text-sand-50">
-              Kontakt
-            </h3>
+            <h3 className="font-serif text-base font-semibold text-forest-900">Kontakt</h3>
             <ul className="mt-5 space-y-4 text-sm">
               <li className="flex items-start gap-3">
-                <MapPinIcon className="mt-0.5 h-5 w-5 shrink-0 text-brand-400" />
+                <MapPinIcon className="mt-0.5 h-5 w-5 shrink-0 text-brand-600" />
                 <span>
                   {site.location}
                   <br />
@@ -120,11 +97,8 @@ export default function Footer() {
                 </span>
               </li>
               <li>
-                <a
-                  href={site.phoneHref}
-                  className="flex items-center gap-3 transition-colors hover:text-sand-50"
-                >
-                  <PhoneIcon className="h-5 w-5 shrink-0 text-brand-400" />
+                <a href={site.phoneHref} className="flex items-center gap-3 transition-colors hover:text-brand-600">
+                  <PhoneIcon className="h-5 w-5 shrink-0 text-brand-600" />
                   {site.phone}
                 </a>
               </li>
@@ -133,41 +107,30 @@ export default function Footer() {
                   href={site.whatsappHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 transition-colors hover:text-sand-50"
+                  className="flex items-center gap-3 transition-colors hover:text-brand-600"
                 >
-                  <WhatsAppIcon className="h-5 w-5 shrink-0 text-brand-400" />
+                  <WhatsAppIcon className="h-5 w-5 shrink-0 text-brand-600" />
                   {site.whatsapp}
                 </a>
               </li>
               <li>
-                <a
-                  href={site.emailHref}
-                  className="flex items-center gap-3 transition-colors hover:text-sand-50"
-                >
-                  <MailIcon className="h-5 w-5 shrink-0 text-brand-400" />
+                <a href={site.emailHref} className="flex items-center gap-3 transition-colors hover:text-brand-600">
+                  <MailIcon className="h-5 w-5 shrink-0 text-brand-600" />
                   {site.email}
                 </a>
               </li>
             </ul>
-            <a href="#kontakt" className="btn-light mt-6 !px-6 !py-3 text-[13px]">
+            <a href="#kontakt" className="btn-primary mt-6 !px-6 !py-3 text-[13px]">
               Beratung anfragen
             </a>
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-sand-50/10 pt-8 text-xs text-sand-200/60 sm:flex-row">
-          <p>
-            © {year} Gartentraum Schröder · Garten- & Landschaftsbau
-            Westoverledingen
-          </p>
+        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-forest-900/10 pt-8 text-xs text-forest-700/60 sm:flex-row">
+          <p>© {year} Gartentraum Schröder · Garten- & Landschaftsbau Westoverledingen</p>
           <div className="flex gap-6">
-            <a href="#" className="transition-colors hover:text-sand-50">
-              Impressum
-            </a>
-            <a href="#" className="transition-colors hover:text-sand-50">
-              Datenschutz
-            </a>
+            <a href="#" className="transition-colors hover:text-brand-600">Impressum</a>
+            <a href="#" className="transition-colors hover:text-brand-600">Datenschutz</a>
           </div>
         </div>
       </div>

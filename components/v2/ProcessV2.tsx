@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Reveal from '@/components/Reveal';
+import { ArrowRightIcon } from '@/components/icons';
 import { Sprig } from './LeafDecor';
 
 const steps = [
@@ -44,7 +45,7 @@ export default function ProcessV2() {
       frame = 0;
       const rect = el.getBoundingClientRect();
       const vh = window.innerHeight;
-      const p = (vh * 0.7 - rect.top) / (rect.height * 0.85);
+      const p = (vh * 0.6 - rect.top) / (rect.height * 0.8);
       setProgress(Math.max(0, Math.min(1, p)));
     };
     const onScroll = () => {
@@ -63,60 +64,70 @@ export default function ProcessV2() {
   const last = steps.length - 1;
 
   return (
-    <section id="ablauf" className="relative overflow-hidden bg-white py-24 lg:py-32">
+    <section id="ablauf" className="relative bg-white py-24 lg:py-32">
       <div className="container-content section-padding">
-        <Reveal className="mx-auto max-w-2xl text-center">
-          <span className="eyebrow mb-5 justify-center text-brand-600">
-            <Sprig className="h-4 w-4 text-brand-500" />
-            So arbeiten wir
-          </span>
-          <h2 className="font-serif text-4xl font-medium text-forest-900 sm:text-5xl">
-            In fünf Schritten zu Ihrem Traumgarten
-          </h2>
-          <p className="mt-5 text-lg text-forest-700/75">
-            Ein klarer, transparenter Prozess – von der ersten Idee bis zur
-            Übergabe.
-          </p>
-        </Reveal>
+        <div className="grid gap-14 lg:grid-cols-[0.82fr_1.18fr] lg:gap-20">
+          {/* Left – sticky intro */}
+          <div className="lg:sticky lg:top-28 lg:self-start">
+            <Reveal>
+              <span className="eyebrow mb-5 text-brand-600">
+                <Sprig className="h-4 w-4 text-brand-500" />
+                So arbeiten wir
+              </span>
+              <h2 className="font-serif text-4xl font-medium leading-tight text-forest-900 sm:text-5xl">
+                In fünf Schritten zu Ihrem Traumgarten
+              </h2>
+              <p className="mt-6 text-lg leading-relaxed text-forest-700/75">
+                Ein klarer, transparenter Prozess – von der ersten Idee bis zur
+                Übergabe. Sie wissen jederzeit, woran wir gerade arbeiten.
+              </p>
+              <a href="#kontakt" className="btn-primary group mt-8">
+                Jetzt Beratung anfragen
+                <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </a>
+            </Reveal>
+          </div>
 
-        <ol ref={ref} className="relative mx-auto mt-16 max-w-2xl">
-          {/* base vertical line */}
-          <span
-            aria-hidden
-            className="absolute left-7 top-3 bottom-3 w-0.5 rounded-full bg-forest-900/10"
-          />
-          {/* scroll-driven fill */}
-          <span
-            aria-hidden
-            className="absolute left-7 top-3 w-0.5 rounded-full bg-brand-500"
-            style={{ height: `calc(${progress * 100}% - 12px)` }}
-          />
+          {/* Right – steps */}
+          <ol ref={ref} className="relative">
+            {/* base vertical line */}
+            <span
+              aria-hidden
+              className="absolute left-7 top-3 bottom-3 w-0.5 rounded-full bg-forest-900/10"
+            />
+            {/* scroll-driven fill */}
+            <span
+              aria-hidden
+              className="absolute left-7 top-3 w-0.5 rounded-full bg-brand-500"
+              style={{ height: `calc(${progress * 100}% - 12px)` }}
+            />
 
-          {steps.map((step, i) => {
-            const active = progress >= i / last - 0.05;
-            return (
-              <li key={step.number} className="relative pl-24 pb-12 last:pb-0">
-                <span
-                  className={`absolute left-0 top-0 flex h-14 w-14 items-center justify-center rounded-full border font-serif text-lg font-semibold shadow-soft transition-all duration-500 ${
-                    active
-                      ? 'scale-105 border-brand-500 bg-brand-500 text-white'
-                      : 'border-forest-900/10 bg-white text-forest-700'
-                  }`}
-                >
-                  {step.number}
-                </span>
-                <Reveal delay={i * 60}>
-                  <h3 className="font-serif text-2xl font-medium text-forest-900">
-                    {step.title}
-                  </h3>
-                  <p className="mt-2 max-w-md leading-relaxed text-forest-700/75">
-                    {step.text}
-                  </p>
-                </Reveal>
-              </li>
-            );
-          })}
-        </ol>
+            {steps.map((step, i) => {
+              const active = progress >= i / last - 0.05;
+              return (
+                <li key={step.number} className="relative pl-24 pb-12 last:pb-0">
+                  <span
+                    className={`absolute left-0 top-0 flex h-14 w-14 items-center justify-center rounded-full border font-serif text-lg font-semibold shadow-soft transition-all duration-500 ${
+                      active
+                        ? 'scale-105 border-brand-500 bg-brand-500 text-white'
+                        : 'border-forest-900/10 bg-white text-forest-700'
+                    }`}
+                  >
+                    {step.number}
+                  </span>
+                  <Reveal delay={i * 60}>
+                    <h3 className="font-serif text-2xl font-medium text-forest-900">
+                      {step.title}
+                    </h3>
+                    <p className="mt-2 max-w-md leading-relaxed text-forest-700/75">
+                      {step.text}
+                    </p>
+                  </Reveal>
+                </li>
+              );
+            })}
+          </ol>
+        </div>
       </div>
     </section>
   );
