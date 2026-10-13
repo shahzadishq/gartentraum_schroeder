@@ -4,15 +4,15 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { asset } from '@/lib/asset';
 import { ArrowRightIcon } from '@/components/icons';
-import { Sprig } from './LeafDecor';
+import { LeafDecor, Sprig } from './LeafDecor';
 
 const cards = [
   { a: -63, label: 'Moderne Gärten', img: '/images/garden-lawn.webp' },
   { a: -45, label: 'Rollrasen', img: '/images/new-lawn-house.webp' },
-  { a: -27, label: 'Pflasterarbeiten', img: '/images/driveway-clinker.webp' },
+  { a: -27, label: 'Pflasterarbeiten', img: '/images/worker-paving.webp' },
   { a: -9, label: 'Terrassen', img: '/images/hero.webp' },
   { a: 9, label: 'Poolanlagen', img: '/images/pool-stone.webp' },
-  { a: 27, label: 'Antik-Pflaster', img: '/images/paving-modern.webp' },
+  { a: 27, label: 'Zäune & Tore', img: '/images/worker-branded.webp' },
   { a: 45, label: 'Vorgärten', img: '/images/front-garden.webp' },
   { a: 63, label: 'Outdoor-Living', img: '/images/lawn-firepit.webp' },
 ];
@@ -42,9 +42,11 @@ export default function ServicesV2() {
   return (
     <section
       id="leistungen"
-      className="relative overflow-hidden bg-sand-50 pt-20 pb-24 lg:pb-28"
+      className="relative overflow-hidden bg-sand-100 pt-20 pb-24 lg:pb-28"
     >
-      <div className="container-content section-padding">
+      <LeafDecor className="pointer-events-none absolute -left-16 bottom-10 h-40 w-80 rotate-[8deg] text-brand-500/15" />
+      <LeafDecor className="pointer-events-none absolute right-0 top-24 hidden h-32 w-64 -scale-x-100 text-brand-500/12 lg:block" />
+      <div className="container-content section-padding relative">
         <div ref={fanRef} className={`v2fan ${on ? 'is-on' : ''}`}>
           <span className="v2fan__ring" aria-hidden />
 
