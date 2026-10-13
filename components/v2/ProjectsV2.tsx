@@ -3,6 +3,7 @@ import Reveal from '@/components/Reveal';
 import { asset } from '@/lib/asset';
 import { site } from '@/lib/site';
 import { InstagramIcon, ArrowRightIcon } from '@/components/icons';
+import FeaturedProjectV2 from './FeaturedProjectV2';
 
 type Tile = { src: string; label: string; span: string };
 
@@ -20,6 +21,8 @@ export default function ProjectsV2() {
   return (
     <section id="projekte" className="bg-sand-50 py-24 lg:py-32">
       <div className="container-content section-padding">
+        <FeaturedProjectV2 />
+
         <Reveal className="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
             <span className="eyebrow mb-5 text-brand-600">Projekte & Referenzen</span>
