@@ -49,16 +49,15 @@ const config: Config = {
           200: '#cbe29a',
           300: '#7fb142', // fresh green (logo) – accent on dark
           400: '#7fb142', // fresh green (logo)
-          500: '#5f8339', // brand green (logo) – primary
-          600: '#4d6a34', // olive (logo)
+          500: '#7fb142', // fresh green (logo) – primary accent / hovers
+          600: '#4d6a34', // olive (logo) – readable green on light
           700: '#445729', // deep forest (logo)
           800: '#374820',
           900: '#283617',
         },
-        // Earthy browns from the logo wordmark / tree trunk.
-        // Site dark surfaces use the deep bark brown.
-        clay: '#5e3c1e',
-        bark: '#5e3c1e',
+        // Deep garden green for dark surfaces & primary buttons.
+        clay: '#28502b',
+        bark: '#28502b',
       },
       fontFamily: {
         // "serif" utility name kept for churn-free usage; now the geometric
