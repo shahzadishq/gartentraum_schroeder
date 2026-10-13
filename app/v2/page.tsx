@@ -5,7 +5,6 @@ import TrustIntro from '@/components/TrustIntro';
 import ServicesV2 from '@/components/v2/ServicesV2';
 import ProcessV2 from '@/components/v2/ProcessV2';
 import ProjectsV2 from '@/components/v2/ProjectsV2';
-import FeaturedProjectV2 from '@/components/v2/FeaturedProjectV2';
 import WhyUs from '@/components/WhyUs';
 import TestimonialsV2 from '@/components/v2/TestimonialsV2';
 import CTA from '@/components/CTA';
@@ -23,7 +22,6 @@ export default function V2Home() {
         <ServicesV2 />
         <ProcessV2 />
         <ProjectsV2 />
-        <FeaturedProjectV2 />
         <WhyUs />
         <TestimonialsV2 />
         <CTA />
