@@ -18,7 +18,10 @@ export default function Marquee() {
   const row = [...items, ...items];
   return (
     <div className="overflow-hidden border-y border-black/20 bg-bark py-5">
-      <div className="flex w-max animate-marquee items-center gap-10 pr-10">
+      <div
+        className="flex w-max animate-marquee items-center gap-10 pr-10"
+        style={{ animationDuration: '55s' }}
+      >
         {row.map((item, i) => (
           <span
             key={`${item}-${i}`}
