@@ -53,7 +53,7 @@ export default function Testimonials() {
       <div className="overflow-hidden py-3">
         <div
           className="flex w-max gap-6 animate-marquee"
-          style={{ animationDuration: '70s' }}
+          style={{ animationDuration: '95s' }}
         >
           {loop.map((r, i) => (
             <Card key={`${r.name}-${i}`} review={r} />
