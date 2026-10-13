@@ -1,47 +1,58 @@
 import type { SVGProps } from 'react';
 
+// Leaf positions along the branch stem (x, y, rotation in deg).
+const leaves: [number, number, number][] = [
+  [40, 138, 0],
+  [68, 130, 0],
+  [96, 122, 0],
+  [124, 114, 0],
+  [152, 106, 0],
+  [180, 98, 0],
+  [208, 90, 0],
+  [236, 82, 0],
+  [264, 74, 0],
+];
+
 /**
- * Decorative botanical leaf, used as a soft watermark behind v2 sections
- * to reinforce the garden theme. Purely decorative (aria-hidden).
+ * Decorative botanical branch (stroke style) used as a soft watermark
+ * behind v2 sections to reinforce the garden theme. Purely decorative.
  */
 export function LeafDecor(props: SVGProps<SVGSVGElement>) {
   return (
-    <svg viewBox="0 0 200 200" fill="none" aria-hidden {...props}>
-      <path
-        d="M100 12C58 30 30 70 30 118c0 38 28 66 70 70 42-4 70-32 70-70 0-48-28-88-70-106Z"
-        fill="currentColor"
-        opacity="0.9"
-      />
-      <path
-        d="M100 20v160"
-        stroke="#ffffff"
-        strokeOpacity="0.35"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-      />
-      {Array.from({ length: 7 }).map((_, i) => {
-        const y = 40 + i * 20;
-        const spread = 18 + i * 6;
-        return (
-          <g key={i} stroke="#ffffff" strokeOpacity="0.28" strokeWidth="2" strokeLinecap="round">
-            <path d={`M100 ${y}c-${spread} 4 -${spread + 8} 16 -${spread + 12} 30`} />
-            <path d={`M100 ${y}c${spread} 4 ${spread + 8} 16 ${spread + 12} 30`} />
-          </g>
-        );
-      })}
+    <svg
+      viewBox="0 0 320 160"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.2}
+      strokeLinecap="round"
+      aria-hidden
+      {...props}
+    >
+      <path d="M4 150C60 120 120 96 200 78c40-9 78-12 114-12" />
+      {leaves.map(([x, y], i) => (
+        <g key={i}>
+          <path d={`M${x} ${y}c10-18 30-26 46-22-4 18-22 30-46 22z`} />
+          <path d={`M${x} ${y}c-6-16-2-34 12-42 10 14 8 34-12 42z`} />
+        </g>
+      ))}
     </svg>
   );
 }
 
-/** A single simple leaf silhouette (for small accents / sprigs). */
+/** A single leaf sprig (stroke style) for small accents. */
 export function Sprig(props: SVGProps<SVGSVGElement>) {
   return (
-    <svg viewBox="0 0 120 120" fill="none" aria-hidden {...props}>
-      <path
-        d="M60 110C40 95 22 78 20 54 18 34 30 18 48 12c6 20 22 30 34 44 12 14 16 34 4 48-10 10-20 8-26 6Z"
-        fill="currentColor"
-      />
-      <path d="M48 16c6 34 8 64 8 92" stroke="#ffffff" strokeOpacity="0.4" strokeWidth="2" strokeLinecap="round" />
+    <svg
+      viewBox="0 0 64 64"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      aria-hidden
+      {...props}
+    >
+      <path d="M14 56c22-2 34-14 36-36" />
+      <path d="M20 44c12-4 22-14 26-30-16 2-28 12-26 30z" />
     </svg>
   );
 }
